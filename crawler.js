@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+// @ts-nocheck
 import https from "https";
 import fs from "fs/promises";
 import path from "path";
@@ -95,7 +93,7 @@ async function crawlAndStore(url, outputFile) {
 async function crawlAllPages() {
   const baseUrl =
     "https://nfhsreader.nfhs.org/ContentServer/mvc/s3view/587644/html5/587644/OPS/page";
-  const outputDir = "srcs/app/assets/rules/basketball/2023-24";
+  const outputDir = "../src/app/assets/rules/basketball/2023-24";
 
   for (let i = 1; i <= 106; i++) {
     const pageNumber = i.toString().padStart(4, "0");
