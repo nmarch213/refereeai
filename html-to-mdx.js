@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 // @ts-nocheck
 import { readFile, writeFile, readdir, mkdir } from "fs/promises";
 import path from "path";
@@ -13,53 +11,103 @@ const { JSDOM } = jsdom;
 function htmlToMdx(htmlContent) {
   const dom = new JSDOM(htmlContent);
   const document = dom.window.document;
+  const { Node } = dom.window;
 
-  // Find the main content div (parent-p* where * is any number)
   const contentDiv = document.querySelector('div[id^="parent-p"]');
+  if (!contentDiv) return "";
 
-  if (!contentDiv) {
-    return ""; // Return empty string if no content div is found
-  }
-
-  // Extract all text spans
-  const spans = contentDiv.querySelectorAll("span.ps.pr.op.co");
-
-  // Combine spans into paragraphs
-  const paragraphs = [];
-  let currentParagraph = [];
-
-  spans.forEach((span) => {
-    const text = span.textContent.trim();
-    if (text.endsWith(".") || text.endsWith(":")) {
-      currentParagraph.push(text);
-      paragraphs.push(currentParagraph.join(" "));
-      currentParagraph = [];
-    } else {
-      currentParagraph.push(text);
+  function parseElement(element, depth = 0) {
+    let content = "";
+    for (const child of element.childNodes) {
+      if (child.nodeType === Node.TEXT_NODE) {
+        const text = child.textContent.trim();
+        if (text) {
+          content += text + " ";
+        }
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+        switch (child.tagName.toLowerCase()) {
+          case "b":
+          case "strong":
+            content += `**${parseElement(child, depth).trim()}** `;
+            break;
+          case "i":
+          case "em":
+            content += `*${parseElement(child, depth).trim()}* `;
+            break;
+          case "ul":
+          case "ol":
+            content +=
+              "\n\n" +
+              Array.from(child.children)
+                .map(
+                  (li) =>
+                    `${"  ".repeat(depth)}- ${parseElement(li, depth + 1).trim()}`,
+                )
+                .join("\n") +
+              "\n\n";
+            break;
+          case "h1":
+          case "h2":
+          case "h3":
+          case "h4":
+          case "h5":
+          case "h6":
+            const level = parseInt(child.tagName[1]);
+            content += `\n\n${"#".repeat(level)} ${parseElement(child, depth).trim()}\n\n`;
+            break;
+          case "p":
+            content += `\n\n${parseElement(child, depth).trim()}\n\n`;
+            break;
+          case "table":
+            content += "\n\n" + parseTable(child) + "\n\n";
+            break;
+          default:
+            content += parseElement(child, depth);
+        }
+      }
     }
-  });
-
-  // If there's any remaining text, add it as a paragraph
-  if (currentParagraph.length > 0) {
-    paragraphs.push(currentParagraph.join(" "));
+    return content;
   }
 
-  // Convert paragraphs to Markdown
-  const markdownContent = paragraphs.join("\n\n");
+  function parseTable(tableElement) {
+    const rows = Array.from(tableElement.rows);
+    const headerRow = rows.shift();
+    const headers = Array.from(headerRow.cells).map((cell) =>
+      cell.textContent.trim(),
+    );
+    const markdown = [
+      `| ${headers.join(" | ")} |`,
+      `| ${headers.map(() => "---").join(" | ")} |`,
+      ...rows.map(
+        (row) =>
+          `| ${Array.from(row.cells)
+            .map((cell) => cell.textContent.trim())
+            .join(" | ")} |`,
+      ),
+    ].join("\n");
+    return markdown;
+  }
 
-  // Extract page number and title
+  const content = parseElement(contentDiv)
+    .trim()
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/\s+$/gm, "")
+    .replace(/^\s+/gm, "");
+
   const pageNumber =
     document.querySelector('span[epub\\:type="pagebreak"]')?.id || "";
-  const title = document.querySelector("title")?.textContent || "";
+  const title = document.querySelector("title")?.textContent?.trim() || "";
+  const chapterMatch = content.match(/^#+\s*(.+)$/m);
+  const chapter = chapterMatch ? chapterMatch[1].trim() : "";
 
-  // Add MDX-specific elements
-  const mdxContent = `
-# ${title}
+  const mdxContent = `---
+title: "${title}"
+page: "${pageNumber}"
+chapter: "${chapter}"
+---
 
-Page: ${pageNumber}
-
-${markdownContent}
-  `;
+${content}
+`;
 
   return mdxContent;
 }
