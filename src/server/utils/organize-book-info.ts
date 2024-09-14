@@ -15,42 +15,38 @@ async function getMdxFiles(mdxDir: string) {
   return files.filter((file) => file.endsWith(".mdx"));
 }
 
-async function processFile(
-  filePath: string,
-  previousSummary: string,
-  bookType: string,
-) {
+async function processFile(filePath: string, bookType: string) {
   const content = await fs.readFile(filePath, "utf-8");
   const { content: mdxContent } = matter(content);
 
-  const prompt = `Summarize the following content from a ${bookType} Rules book, considering the previous summary:
-
-Previous summary:
-${previousSummary}
-
-New content:
-${mdxContent}
+  const systemPrompt = `You are an expert in translating ${bookType} rulebooks into clear, concise, and well-structured markdown format. Your task is to take the provided content and create a readable, digestible markdown file that maintains the original meaning and structure while improving clarity and organization.
 
 Guidelines:
-1. Focus on rule interpretations and their practical applications.
-2. Highlight any key changes or updates to existing rules.
-3. Organize content by game situations or rule categories for clarity.
-4. Include brief examples or scenarios for complex rules.
-5. Emphasize officiating techniques and best practices related to the rules.
-6. Maintain consistent terminology throughout the summary.
-7. Summarize key points in bullet form for quick reference.
-8. Add cross-references to related rules or sections when applicable.
-9. Continuously improve and refine the previous summary, integrating new information seamlessly.
-10. Create meaningful links between different sections of content.
-11. Ensure the summary is easily readable and accessible for quick reference during games or training.
-12. When stating specific rules, use exact quotes from the official rulebook and clearly indicate these with quotation marks.
-13. For each rule mentioned, provide the exact rule number or section for easy reference.
+1. Maintain the original structure and hierarchy of the content.
+2. Use appropriate markdown formatting (headers, lists, tables, etc.) to enhance readability.
+3. Ensure all rule numbers and references are accurately preserved.
+4. Use bold or italic text to emphasize key points or important terms.
+5. Create tables for any tabular data present in the original content.
+6. Use blockquotes for any official definitions or important notes.
+7. Include any diagrams or illustrations as markdown-compatible image links (if available).
+8. Organize content into logical sections using appropriate header levels.
+9. Use code blocks for any specific examples or scenarios that benefit from distinct formatting.
+10. Maintain consistent terminology throughout the document.
+11. Ensure the markdown is easily readable and accessible for quick reference.
+12. Preserve any cross-references to other sections or rules, using markdown links where appropriate.
 
-Provide a concise yet comprehensive summary that captures the essential rules, interpretations, and officiating guidelines, integrating with and improving upon the previous summary where relevant. Ensure that official rule statements are quoted verbatim and properly referenced.`;
+Provide a clear, well-structured markdown translation that accurately represents the original content while improving its readability and accessibility.`;
+
+  const userPrompt = `Translate the following content from a ${bookType} Rules book into a clear, readable markdown format:
+
+${mdxContent}`;
 
   const { text } = await generateText({
     model: openai("gpt-4o-mini"),
-    messages: [{ role: "user", content: prompt }],
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
   });
 
   return text;
@@ -58,12 +54,12 @@ Provide a concise yet comprehensive summary that captures the essential rules, i
 
 async function processAllFiles(config: BookConfig) {
   const mdxFiles = await getMdxFiles(config.mdxDir);
-  let outputContent = ``;
-  let previousSummary = "";
+  let outputContent = `# ${config.bookType} Rules\n\n## Table of Contents\n\n`;
 
   // Generate table of contents
   for (const file of mdxFiles) {
-    outputContent += `- [${path.basename(file, ".mdx")}](#${path.basename(file, ".mdx").toLowerCase().replace(/\s+/g, "-")})\n`;
+    const sectionName = path.basename(file, ".mdx");
+    outputContent += `- [${sectionName}](#${sectionName.toLowerCase().replace(/\s+/g, "-")})\n`;
   }
 
   outputContent += "\n---\n\n";
@@ -71,18 +67,14 @@ async function processAllFiles(config: BookConfig) {
   for (const file of mdxFiles) {
     console.log(`Processing ${file}...`);
     const filePath = path.join(config.mdxDir, file);
-    const result = await processFile(
-      filePath,
-      previousSummary,
-      config.bookType,
-    );
+    const result = await processFile(filePath, config.bookType);
 
-    outputContent += `## ${path.basename(file, ".mdx")}\n\n${result}\n\n---\n\n`;
-    previousSummary = result;
+    const sectionName = path.basename(file, ".mdx");
+    outputContent += `## ${sectionName}\n\n${result}\n\n---\n\n`;
   }
 
   await fs.writeFile(config.outputFile, outputContent);
-  console.log(`Comprehensive summary written to ${config.outputFile}`);
+  console.log(`Translated markdown content written to ${config.outputFile}`);
 }
 
 export async function generateBookSummary(config: BookConfig) {
