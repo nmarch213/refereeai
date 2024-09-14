@@ -1,6 +1,6 @@
 import { openai } from "@ai-sdk/openai";
 import { convertToCoreMessages, embed, streamText } from "ai";
-import { sql, desc } from "drizzle-orm";
+import { sql, desc, cosineDistance, gt } from "drizzle-orm";
 import { db } from "~/server/db";
 import { basketball202324 } from "~/server/db/schema";
 
@@ -17,7 +17,10 @@ export async function POST(req: Request) {
       .map((m) => m.content)
       .join("\n"),
   });
-
+  const similarity = sql<number>`1 - (${cosineDistance(
+    basketball202324.embedding,
+    embedding,
+  )})`;
   const results = await db
     .select({
       id: basketball202324.id,
@@ -25,13 +28,11 @@ export async function POST(req: Request) {
       page: basketball202324.page,
       chapter: basketball202324.chapter,
       content: basketball202324.content,
-      similarity:
-        sql<number>`1 - (${basketball202324.embedding}::vector <-> ${embedding}::vector)`.as(
-          "similarity",
-        ),
+      similarity,
     })
     .from(basketball202324)
-    .orderBy(desc(sql`similarity`))
+    .where(gt(similarity, 0.5))
+    .orderBy((t) => desc(t.similarity))
     .limit(5);
 
   const context = results
