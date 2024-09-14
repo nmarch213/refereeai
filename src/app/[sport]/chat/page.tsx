@@ -40,17 +40,6 @@ export default function SportRulebookChat({
     <div className="flex min-h-screen flex-col">
       <main className="container mx-auto flex-grow px-4 py-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="md:col-span-1">
-            <h2 className="mb-4 text-xl font-semibold">About {sport?.name}</h2>
-            <p className="mb-4 text-muted-foreground">{sport?.description}</p>
-            <h3 className="mb-2 text-lg font-semibold">Quick Links</h3>
-            <ul className="list-inside list-disc text-muted-foreground">
-              <li>Official Rules</li>
-              <li>Player Positions</li>
-              <li>Equipment Guide</li>
-              <li>Common Penalties</li>
-            </ul>
-          </div>
           <div className="md:col-span-2">
             <ChatInterface sport={sport?.name ?? ""} />
           </div>

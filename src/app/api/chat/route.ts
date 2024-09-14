@@ -8,11 +8,12 @@ import { basketball202324 } from "~/server/db/schema";
 export const maxDuration = 30;
 
 export async function POST(req: Request) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { messages } = await req.json();
 
-  // Perform similarity search
   const { embedding } = await embed({
     model: openai.embedding("text-embedding-ada-002"),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     value: convertToCoreMessages(messages)
       .map((m) => m.content)
       .join("\n"),
@@ -42,6 +43,7 @@ export async function POST(req: Request) {
     )
     .join("\n\n");
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   messages.push({
     role: "system",
     content: `Context:\n${context}`,
@@ -51,6 +53,7 @@ export async function POST(req: Request) {
     model: openai("gpt-4-turbo"),
     system:
       "You are a helpful assistant knowledgeable about basketball rules and regulations.",
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     messages: convertToCoreMessages(messages),
   });
 
