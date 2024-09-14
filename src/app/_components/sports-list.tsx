@@ -13,7 +13,7 @@ interface SportsListProps {
   onSportClick: (sportName: string) => void;
 }
 
-export function SportsList({ sports, onSportClick }: SportsListProps) {
+export function SportsList({ sports }: SportsListProps) {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {sports.map((sport, index) => (
@@ -30,10 +30,7 @@ export function SportsList({ sports, onSportClick }: SportsListProps) {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <button
-              className="w-full rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
-              onClick={() => onSportClick(sport.name)}
-            >
+            <button className="w-full rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600">
               View Sport
             </button>
           </CardContent>
