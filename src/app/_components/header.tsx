@@ -12,30 +12,49 @@ export async function Header() {
         <span className="font-bold">Referee AI</span>
       </Link>
       <nav className="flex items-center gap-4 sm:gap-6">
-        <Link
-          className="text-sm font-medium underline-offset-4 hover:underline"
-          href="#features"
-        >
-          Features
-        </Link>
-        <Link
-          className="text-sm font-medium underline-offset-4 hover:underline"
-          href="#testimonials"
-        >
-          Testimonials
-        </Link>
-        <Link
-          className="text-sm font-medium underline-offset-4 hover:underline"
-          href="#pricing"
-        >
-          Pricing
-        </Link>
-        <Link
-          href={session ? "/api/auth/signout" : "/api/auth/signin"}
-          className="rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-        >
-          {session ? "Sign out" : "Sign in"}
-        </Link>
+        {session ? (
+          <>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="/"
+            >
+              Dashboard
+            </Link>
+            <Link
+              href="/api/auth/signout"
+              className="rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            >
+              Sign out
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#features"
+            >
+              Features
+            </Link>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#testimonials"
+            >
+              Testimonials
+            </Link>
+            <Link
+              className="text-sm font-medium underline-offset-4 hover:underline"
+              href="#pricing"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/api/auth/signin"
+              className="rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            >
+              Sign in
+            </Link>
+          </>
+        )}
       </nav>
     </header>
   );

@@ -38,11 +38,6 @@ export default function SportRulebookChat({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="bg-primary py-4 text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold">{sport?.name} Rulebook Chat</h1>
-        </div>
-      </header>
       <main className="container mx-auto flex-grow px-4 py-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="md:col-span-1">
@@ -61,11 +56,6 @@ export default function SportRulebookChat({
           </div>
         </div>
       </main>
-      <footer className="bg-secondary py-4">
-        <div className="container mx-auto px-4 text-center text-secondary-foreground">
-          © 2023 Sport Rulebook Chat. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }
