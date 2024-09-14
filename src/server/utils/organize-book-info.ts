@@ -56,7 +56,8 @@ Please ensure that:
 2. You create internal links between related sections using markdown syntax.
 3. You append entirely new content to the end of the existing text.
 4. You update any table of contents or index to reflect the changes.
-5. The final output is a cohesive, well-structured document that incorporates both the existing and new content.`;
+5. The final output is a cohesive, well-structured document that incorporates both the existing and new content.
+6. Remove all references to Page Numbers as this will be handled by the table of contents at the top of the document.`;
 
   const { text } = await generateText({
     model: openai("gpt-4o-mini"),
@@ -84,8 +85,36 @@ Focus on:
 5. Enhancing the overall flow and readability of the content.
 6. Verifying that all new content is properly integrated and linked.
 7. Updating the table of contents or index to accurately reflect the current structure.
+8. Continually update the table of contents as new content is added.
 
 Please provide the optimized markdown content.`;
+
+  const { text } = await generateText({
+    model: openai("gpt-4o-mini"),
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+  });
+
+  return text;
+}
+
+async function addInternalLinks(content: string, bookType: string) {
+  const systemPrompt = `You are an expert in ${bookType} rulebooks. Your task is to add internal links between Rules and Sections in the given markdown content.`;
+
+  const userPrompt = `Please add internal links between Rules and Sections in the following markdown content:
+
+${content}
+
+Guidelines:
+1. Use markdown syntax to create links between related Rules and Sections.
+2. Ensure that links are bidirectional (i.e., if Rule 1 links to Section 2, Section 2 should also link back to Rule 1).
+3. Only add links where there's a clear relationship between Rules and Sections.
+4. Maintain the existing structure and formatting of the content.
+5. Do not add external links or change any other content.
+
+Please provide the updated markdown content with internal links added.`;
 
   const { text } = await generateText({
     model: openai("gpt-4o-mini"),
@@ -108,11 +137,12 @@ async function processAllFiles(config: BookConfig) {
     const result = await processFile(filePath, config.bookType, outputContent);
 
     outputContent = await optimizeOutput(result, config.bookType);
+    outputContent = await addInternalLinks(outputContent, config.bookType);
   }
 
   await fs.writeFile(config.outputFile, outputContent);
   console.log(
-    `Translated and optimized markdown content written to ${config.outputFile}`,
+    `Translated, optimized, and linked markdown content written to ${config.outputFile}`,
   );
 }
 
