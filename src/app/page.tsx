@@ -1,55 +1,19 @@
+import { CheckSquare, MessageSquare, Search } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { Search, CheckSquare, MessageSquare, CheckCircle } from "lucide-react";
-import Link from "next/link";
-import { getServerAuthSession } from "~/server/auth";
-import { api, HydrateClient } from "~/trpc/server";
+import { HydrateClient } from "~/trpc/server";
 import { Pricing } from "./_components/pricing";
 
 export default async function Component() {
-  const session = await getServerAuthSession();
-
   return (
     <HydrateClient>
       <div className="flex min-h-screen w-full flex-col">
-        <header className="flex h-14 items-center justify-between px-4 lg:px-6">
-          <Link className="flex items-center justify-center" href="#">
-            <span className="font-bold">Referee AI</span>
-          </Link>
-          <nav className="flex items-center gap-4 sm:gap-6">
-            <Link
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              href="#features"
-            >
-              Features
-            </Link>
-            <Link
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              href="#testimonials"
-            >
-              Testimonials
-            </Link>
-            <Link
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              href="#pricing"
-            >
-              Pricing
-            </Link>
-            <Link
-              href={session ? "/api/auth/signout" : "/api/auth/signin"}
-              className="rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-            >
-              {session ? "Sign out" : "Sign in"}
-            </Link>
-          </nav>
-        </header>
         <main className="flex-1">
           <div className="bg-black py-12 text-white md:py-24 lg:py-32 xl:py-48">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -179,25 +143,6 @@ export default async function Component() {
             </div>
           </div>
         </main>
-        <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
-          <p className="text-xs text-gray-500">
-            © 2023 Referee AI. All rights reserved.
-          </p>
-          <nav className="flex gap-4 sm:ml-auto sm:gap-6">
-            <Link
-              className="text-xs underline-offset-4 hover:underline"
-              href="#"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              className="text-xs underline-offset-4 hover:underline"
-              href="#"
-            >
-              Privacy
-            </Link>
-          </nav>
-        </footer>
       </div>
     </HydrateClient>
   );
