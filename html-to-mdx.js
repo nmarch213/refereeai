@@ -94,22 +94,7 @@ function htmlToMdx(htmlContent) {
     .replace(/\s+$/gm, "")
     .replace(/^\s+/gm, "");
 
-  const pageNumber =
-    document.querySelector('span[epub\\:type="pagebreak"]')?.id || "";
-  const title = document.querySelector("title")?.textContent?.trim() || "";
-  const chapterMatch = content.match(/^#+\s*(.+)$/m);
-  const chapter = chapterMatch ? chapterMatch[1].trim() : "";
-
-  const mdxContent = `---
-title: "${title}"
-page: "${pageNumber}"
-chapter: "${chapter}"
----
-
-${content}
-`;
-
-  return mdxContent;
+  return content;
 }
 
 async function ensureDirectoryExists(directory) {
@@ -129,6 +114,8 @@ async function processHtmlFiles(inputDir, outputDir) {
     const files = await readdir(inputDir);
     const htmlFiles = files.filter((file) => file.endsWith(".html"));
 
+    let indexContent = "";
+
     for (const file of htmlFiles) {
       const inputPath = path.join(inputDir, file);
       const outputPath = path.join(outputDir, file.replace(".html", ".mdx"));
@@ -138,7 +125,15 @@ async function processHtmlFiles(inputDir, outputDir) {
 
       await writeFile(outputPath, mdxContent);
       console.log(`Converted ${file} to MDX successfully.`);
+
+      // Append the content to the index file
+      indexContent += mdxContent + "\n\n";
     }
+
+    // Write the index.mdx file
+    const indexPath = path.join(outputDir, "index.mdx");
+    await writeFile(indexPath, indexContent);
+    console.log("Created index.mdx with all content successfully.");
   } catch (err) {
     console.error("Error processing files:", err);
   }
