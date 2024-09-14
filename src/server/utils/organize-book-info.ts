@@ -39,9 +39,11 @@ Guidelines:
 11. Ensure the markdown is easily readable and accessible for quick reference.
 12. Create internal links between related sections or rules using markdown syntax.
 13. Merge new content with existing content where appropriate, avoiding duplication.
-14. Append entirely new sections or rules to the end of the existing content.
-15. Update any table of contents or index to reflect the newly added or merged content.
-16. Ensure smooth transitions between existing and new content.`;
+14. Use consistent header levels (e.g., # for main sections, ## for subsections, ### for rules).
+15. Create a table of contents at the beginning of the document, updating it as new content is added.
+16. Use HTML comments to mark the beginning and end of each major section for easier navigation.
+17. Implement a consistent naming convention for internal links (e.g., #rule-1-2 for Rule 1.2).
+18. Use markdown footnotes for additional explanations or clarifications.`;
 
   const userPrompt = `Here's the previously translated content:
 
@@ -57,7 +59,11 @@ Please ensure that:
 3. You append entirely new content to the end of the existing text.
 4. You update any table of contents or index to reflect the changes.
 5. The final output is a cohesive, well-structured document that incorporates both the existing and new content.
-6. Remove all references to Page Numbers as this will be handled by the table of contents at the top of the document.`;
+6. Remove all references to Page Numbers as this will be handled by the table of contents at the top of the document.
+7. You use HTML comments to clearly mark the beginning and end of newly added or modified sections.
+8. You implement a consistent internal link structure (e.g., #section-1-2 for Section 1.2).
+9. You add footnotes for any additional explanations or clarifications that don't fit directly in the main text.
+10. You create a glossary section at the end of the document for important terms and concepts.`;
 
   const { text } = await generateText({
     model: openai("gpt-4o-mini"),
