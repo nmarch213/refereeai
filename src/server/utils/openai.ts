@@ -1,6 +1,6 @@
 import { createOpenAI } from "@ai-sdk/openai";
-import { env } from "~/env";
+// import { env } from "~/env";
 
 export const openai = createOpenAI({
-  apiKey: env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });

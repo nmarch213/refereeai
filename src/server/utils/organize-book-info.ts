@@ -1,8 +1,8 @@
-import { openai } from "@ai-sdk/openai";
 import { generateText } from "ai";
 import fs from "fs/promises";
 import matter from "gray-matter";
 import path from "path";
+import { openai } from "./openai";
 
 interface BookConfig {
   mdxDir: string;
@@ -58,7 +58,7 @@ Provide a concise yet comprehensive summary that captures the essential rules, i
 
 async function processAllFiles(config: BookConfig) {
   const mdxFiles = await getMdxFiles(config.mdxDir);
-  let outputContent = `# Comprehensive ${config.bookType} Rules Summary\n\n## Table of Contents\n\n`;
+  let outputContent = ``;
   let previousSummary = "";
 
   // Generate table of contents
