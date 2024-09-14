@@ -69,26 +69,51 @@ Please ensure that:
   return text;
 }
 
+async function optimizeOutput(content: string, bookType: string) {
+  const systemPrompt = `You are an expert editor specializing in ${bookType} rulebooks. Your task is to refine and optimize the given markdown content, ensuring it's well-structured, consistent, and easy to navigate.`;
+
+  const userPrompt = `Please review and optimize the following markdown content:
+
+${content}
+
+Focus on:
+1. Ensuring consistent formatting and style throughout the document.
+2. Optimizing the structure and hierarchy of headers.
+3. Improving internal links and cross-references.
+4. Eliminating any redundancies or duplications.
+5. Enhancing the overall flow and readability of the content.
+6. Verifying that all new content is properly integrated and linked.
+7. Updating the table of contents or index to accurately reflect the current structure.
+
+Please provide the optimized markdown content.`;
+
+  const { text } = await generateText({
+    model: openai("gpt-4o-mini"),
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: userPrompt },
+    ],
+  });
+
+  return text;
+}
+
 async function processAllFiles(config: BookConfig) {
   const mdxFiles = await getMdxFiles(config.mdxDir);
   let outputContent = "";
 
-  let previousContent = "";
   for (const file of mdxFiles) {
     console.log(`Processing ${file}...`);
     const filePath = path.join(config.mdxDir, file);
-    const result = await processFile(
-      filePath,
-      config.bookType,
-      previousContent,
-    );
+    const result = await processFile(filePath, config.bookType, outputContent);
 
-    outputContent += `${result}`;
-    previousContent = outputContent; // Update previousContent for the next iteration
+    outputContent = await optimizeOutput(result, config.bookType);
   }
 
   await fs.writeFile(config.outputFile, outputContent);
-  console.log(`Translated markdown content written to ${config.outputFile}`);
+  console.log(
+    `Translated and optimized markdown content written to ${config.outputFile}`,
+  );
 }
 
 export async function generateBookSummary(config: BookConfig) {
