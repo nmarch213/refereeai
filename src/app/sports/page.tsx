@@ -1,5 +1,5 @@
 import { HydrateClient } from "~/trpc/server";
-import { SportsList } from "../../_components/sports-list";
+import { SportsList } from "../_components/sports-list";
 
 export default async function Home() {
   const sports = [

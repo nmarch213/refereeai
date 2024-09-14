@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "~/components/ui/card";
 
 interface Sport {
   name: string;
+  slug: string;
   active: boolean;
 }
 

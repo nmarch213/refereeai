@@ -9,8 +9,16 @@ import {
 } from "~/components/ui/card";
 import { HydrateClient } from "~/trpc/server";
 import { Pricing } from "./_components/pricing";
+import { Dashboard } from "./_components/dashboard";
+import { getServerAuthSession } from "~/server/auth";
 
-export default async function Component() {
+export default async function LandingPage() {
+  const session = await getServerAuthSession();
+
+  if (session) {
+    return <Dashboard />;
+  }
+
   return (
     <HydrateClient>
       <div className="flex min-h-screen w-full flex-col">
