@@ -23,7 +23,7 @@ async function processFile(
   const content = await fs.readFile(filePath, "utf-8");
   const { content: mdxContent } = matter(content);
 
-  const systemPrompt = `You are an expert in translating ${bookType} rulebooks into clear, concise, and well-structured markdown format. Your task is to take the provided content and create a readable, digestible markdown file that maintains the original meaning and structure while improving clarity and organization.
+  const systemPrompt = `You are an expert in translating ${bookType} rulebooks into clear, concise, and well-structured markdown format. Your task is to take the provided content, merge it with the previous content, create appropriate links, and append new information.
 
 Guidelines:
 1. Maintain the original structure and hierarchy of the content.
@@ -37,18 +37,26 @@ Guidelines:
 9. Use code blocks for any specific examples or scenarios that benefit from distinct formatting.
 10. Maintain consistent terminology throughout the document.
 11. Ensure the markdown is easily readable and accessible for quick reference.
-12. Preserve any cross-references to other sections or rules, using markdown links where appropriate.
-13. Maintain consistency with the previously translated content.
-
-Provide a clear, well-structured markdown translation that accurately represents the original content while improving its readability and accessibility.`;
+12. Create internal links between related sections or rules using markdown syntax.
+13. Merge new content with existing content where appropriate, avoiding duplication.
+14. Append entirely new sections or rules to the end of the existing content.
+15. Update any table of contents or index to reflect the newly added or merged content.
+16. Ensure smooth transitions between existing and new content.`;
 
   const userPrompt = `Here's the previously translated content:
 
 ${previousContent}
 
-Now, translate the following new content from the ${bookType} Rules book into a clear, readable markdown format, maintaining consistency with the previous content:
+Now, merge, link, and append the following new content from the ${bookType} Rules book into the existing markdown format:
 
-${mdxContent}`;
+${mdxContent}
+
+Please ensure that:
+1. You merge overlapping or related content with the existing text.
+2. You create internal links between related sections using markdown syntax.
+3. You append entirely new content to the end of the existing text.
+4. You update any table of contents or index to reflect the changes.
+5. The final output is a cohesive, well-structured document that incorporates both the existing and new content.`;
 
   const { text } = await generateText({
     model: openai("gpt-4o-mini"),
