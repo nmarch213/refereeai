@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ChatInterface from "../_components/chat-interface";
+import ChatInterface from "../../_components/chat-interface";
 
 export const metadata: Metadata = {
   title: "Sport Rulebook Chat",

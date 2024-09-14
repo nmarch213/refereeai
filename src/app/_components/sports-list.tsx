@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HelpCircle, Book, MoreHorizontal } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import {
@@ -60,10 +61,14 @@ export default function SportsCards() {
               <CardTitle className="mb-2 text-xl">{sport.name}</CardTitle>
             </CardContent>
             <CardFooter className="flex justify-between bg-secondary p-4">
-              <Button variant="ghost" size="sm">
-                <HelpCircle className="mr-2 h-4 w-4" />
-                Ask Question
-              </Button>
+              <Link href={`/${sport.slug}/chat`} passHref>
+                <Button variant="ghost" size="sm" asChild>
+                  <span>
+                    <HelpCircle className="mr-2 h-4 w-4" />
+                    Ask Question
+                  </span>
+                </Button>
+              </Link>
               <Button variant="ghost" size="sm">
                 <Book className="mr-2 h-4 w-4" />
                 View Rules
