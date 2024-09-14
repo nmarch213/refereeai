@@ -7,7 +7,7 @@ import { basketball202324 } from "~/server/db/schema";
 import fs from "fs/promises";
 import path from "path";
 import { embed } from "ai";
-import { openai } from "../utils/openai";
+import { openai } from "../../../utils/openai";
 import matter from "gray-matter";
 
 const MDX_DIR = "src/app/assets/books/basketball/2023-24/mdx";
