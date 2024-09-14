@@ -6,8 +6,6 @@ import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Header } from "~/app/_components/header";
 import { Footer } from "./_components/footer";
-import { getServerAuthSession } from "~/server/auth";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Referee AI",
@@ -18,8 +16,6 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const session = await getServerAuthSession();
-
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>

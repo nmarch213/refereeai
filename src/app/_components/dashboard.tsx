@@ -19,22 +19,12 @@ import {
   CardTitle,
 } from "~/components/ui/card";
 import { SidebarSheet } from "./sidebar";
-import { SportsList } from "./sports-list";
+import SportsCards from "./sports-list";
 
 export const description =
   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
 
 export function Dashboard() {
-  const sports = [
-    { name: "Basketball", slug: "basketball", active: true },
-    { name: "Football", slug: "football", active: true },
-    { name: "Soccer", slug: "soccer", active: true },
-    { name: "Volleyball", slug: "volleyball", active: true },
-    { name: "Baseball", slug: "baseball", active: true },
-    { name: "Tennis", slug: "tennis", active: true },
-    { name: "Golf", slug: "golf", active: true },
-    { name: "Basketball", slug: "basketball", active: true },
-  ];
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-muted/40 md:block">
@@ -113,7 +103,7 @@ export function Dashboard() {
         <SidebarSheet />
 
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
-          <SportsList sports={sports} />
+          <SportsCards />
         </main>
       </div>
     </div>
