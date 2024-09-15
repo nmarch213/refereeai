@@ -98,7 +98,7 @@ const baseUrls = [
     sport: "volleyball",
     url: "https://nfhsreader.nfhs.org/ContentServer/mvc/s3view/645775/html5/645775/OPS/",
     year: "2023-24",
-    crawled: false,
+    crawled: true,
   },
 ];
 
