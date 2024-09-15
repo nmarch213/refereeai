@@ -36,15 +36,7 @@ function htmlToMdx(htmlContent) {
             break;
           case "ul":
           case "ol":
-            content +=
-              "\n\n" +
-              Array.from(child.children)
-                .map(
-                  (li) =>
-                    `${"  ".repeat(depth)}- ${parseElement(li, depth + 1).trim()}`,
-                )
-                .join("\n") +
-              "\n\n";
+            content += "\n\n" + parseList(child, depth) + "\n\n";
             break;
           case "h1":
           case "h2":
@@ -61,12 +53,37 @@ function htmlToMdx(htmlContent) {
           case "table":
             content += "\n\n" + parseTable(child) + "\n\n";
             break;
+          case "a":
+            content += parseLink(child);
+            break;
+          case "img":
+            content += parseImage(child);
+            break;
+          case "br":
+            content += "\n";
+            break;
+          case "span":
+            const parsedSpan = parseElement(child, depth).trim();
+            if (parsedSpan) {
+              content += parsedSpan + " ";
+            }
+            break;
           default:
             content += parseElement(child, depth);
         }
       }
     }
     return content;
+  }
+
+  function parseList(listElement, depth) {
+    const listType = listElement.tagName.toLowerCase() === "ol" ? "1." : "-";
+    return Array.from(listElement.children)
+      .map(
+        (li) =>
+          `${"  ".repeat(depth)}${listType} ${parseElement(li, depth + 1).trim()}`,
+      )
+      .join("\n");
   }
 
   function parseTable(tableElement) {
@@ -88,13 +105,25 @@ function htmlToMdx(htmlContent) {
     return markdown;
   }
 
+  function parseLink(linkElement) {
+    const href = linkElement.getAttribute("href");
+    const text = linkElement.textContent.trim();
+    return `[${text}](${href})`;
+  }
+
+  function parseImage(imgElement) {
+    const src = imgElement.getAttribute("src");
+    const alt = imgElement.getAttribute("alt") || "";
+    return `![${alt}](${src})`;
+  }
+
   const content = parseElement(contentDiv)
     .trim()
     .replace(/\n{3,}/g, "\n\n")
     .replace(/\s+$/gm, "")
     .replace(/^\s+/gm, "");
 
-  return { content, title: contentDiv.textContent.trim() };
+  return { content, title: contentDiv.textContent.trim().split("\n")[0] };
 }
 
 function extractPageNumber(fileName) {
@@ -126,13 +155,12 @@ async function processHtmlFiles(inputDir, outputDir) {
       const outputPath = path.join(outputDir, file.replace(".html", ".mdx"));
 
       const htmlContent = await readFile(inputPath, "utf8");
-      const { content: mdxContent, title } = htmlToMdx(htmlContent);
+      const { content: mdxContent } = htmlToMdx(htmlContent);
 
       const pageNumber = extractPageNumber(file);
 
-      // Add frontmatter with metadata
+      // Add frontmatter with metadata (without title)
       const frontmatter = `---
-title: "${title}"
 page: ${pageNumber}
 ---
 
