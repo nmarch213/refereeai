@@ -60,22 +60,6 @@ async function main() {
     const MDX_DIR = `src/app/assets/books/${book.sport}/${book.year}/mdx`;
     const schema = book.schema;
 
-    try {
-      const existingEntry = await db.query[schema].findFirst();
-
-      if (existingEntry) {
-        console.log(
-          `${book.sport} ${book.year} MDX embeddings already seeded!`,
-        );
-        continue;
-      }
-    } catch (error) {
-      console.error(
-        `Error checking if ${book.sport} ${book.year} MDX embeddings exist in the database.`,
-      );
-      throw error;
-    }
-
     const mdxFiles = await getMdxFiles(MDX_DIR);
 
     for (const file of mdxFiles) {
@@ -85,18 +69,14 @@ async function main() {
         .insert(schema)
         .values({
           id: `${book.sport}_${book.year}_${file.id}`,
-          title: file.title,
           page: file.page,
-          chapter: file.chapter,
           content: file.content,
           embedding,
         })
         .onConflictDoUpdate({
           target: schema.id,
           set: {
-            title: file.title,
             page: file.page,
-            chapter: file.chapter,
             content: file.content,
             embedding,
           },

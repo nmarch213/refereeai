@@ -134,9 +134,7 @@ export const basketball202324 = createTable(
   "basketball_2023-24",
   {
     id: varchar("id", { length: 255 }).primaryKey().notNull(),
-    title: varchar("title", { length: 255 }).notNull(),
     page: varchar("page", { length: 255 }).notNull(),
-    chapter: varchar("chapter", { length: 255 }),
     content: text("content").notNull(),
     embedding: vector("embedding", { dimensions: 1536 }).notNull(),
   },
