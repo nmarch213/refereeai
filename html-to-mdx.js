@@ -94,7 +94,12 @@ function htmlToMdx(htmlContent) {
     .replace(/\s+$/gm, "")
     .replace(/^\s+/gm, "");
 
-  return content;
+  return { content, title: contentDiv.textContent.trim() };
+}
+
+function extractPageNumber(fileName) {
+  const match = fileName.match(/page(\d+)\.html/);
+  return match ? parseInt(match[1], 10) : null;
 }
 
 async function ensureDirectoryExists(directory) {
@@ -121,10 +126,20 @@ async function processHtmlFiles(inputDir, outputDir) {
       const outputPath = path.join(outputDir, file.replace(".html", ".mdx"));
 
       const htmlContent = await readFile(inputPath, "utf8");
-      const mdxContent = htmlToMdx(htmlContent);
+      const { content: mdxContent, title } = htmlToMdx(htmlContent);
 
-      await writeFile(outputPath, mdxContent);
-      console.log(`Converted ${file} to MDX successfully.`);
+      const pageNumber = extractPageNumber(file);
+
+      // Add frontmatter with metadata
+      const frontmatter = `---
+title: "${title}"
+page: ${pageNumber}
+---
+
+`;
+
+      await writeFile(outputPath, frontmatter + mdxContent);
+      console.log(`Converted ${file} to MDX with metadata successfully.`);
 
       // Append the content to the index file
       indexContent += mdxContent + "\n\n";
