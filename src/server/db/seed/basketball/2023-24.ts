@@ -3,14 +3,17 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { db } from "~/server/db";
-import { basketball202324 } from "~/server/db/schema";
+import { basketball202324, volleyball202324 } from "~/server/db/schema";
 import fs from "fs/promises";
 import path from "path";
 import { embed } from "ai";
 import { openai } from "../../../utils/openai";
 import matter from "gray-matter";
 
-const MDX_DIR = "src/app/assets/books/basketball/2023-24/mdx";
+const books = [
+  { sport: "basketball", year: "2023-24", processed: true },
+  { sport: "volleyball", year: "2023-24", processed: false },
+];
 
 async function getMdxFiles() {
   const files = await fs.readdir(MDX_DIR);
@@ -41,48 +44,62 @@ async function getMdxFiles() {
 }
 
 async function main() {
-  try {
-    const existingEntry = await db.query.basketball202324.findFirst();
+  for (const book of books) {
+    if (!book.processed) continue;
 
-    if (existingEntry) {
-      console.log("MDX embeddings already seeded!");
-      return;
+    const MDX_DIR = `src/app/assets/books/${book.sport}/${book.year}/mdx`;
+    const schema =
+      book.sport === "basketball" ? basketball202324 : volleyball202324;
+
+    try {
+      const existingEntry = await db.query[schema].findFirst();
+
+      if (existingEntry) {
+        console.log(
+          `${book.sport} ${book.year} MDX embeddings already seeded!`,
+        );
+        continue;
+      }
+    } catch (error) {
+      console.error(
+        `Error checking if ${book.sport} ${book.year} MDX embeddings exist in the database.`,
+      );
+      throw error;
     }
-  } catch (error) {
-    console.error("Error checking if MDX embeddings exist in the database.");
-    throw error;
-  }
 
-  const mdxFiles = await getMdxFiles();
+    const mdxFiles = await getMdxFiles();
 
-  for (const file of mdxFiles) {
-    const embedding = await generateEmbedding(file.fullContent);
+    for (const file of mdxFiles) {
+      const embedding = await generateEmbedding(file.fullContent);
 
-    await db
-      .insert(basketball202324)
-      .values({
-        id: `basketball_2023-24_${file.id}`,
-        title: file.title,
-        page: file.page,
-        chapter: file.chapter,
-        content: file.content,
-        embedding,
-      })
-      .onConflictDoUpdate({
-        target: basketball202324.id,
-        set: {
+      await db
+        .insert(schema)
+        .values({
+          id: `${book.sport}_${book.year}_${file.id}`,
           title: file.title,
           page: file.page,
           chapter: file.chapter,
           content: file.content,
           embedding,
-        },
-      });
+        })
+        .onConflictDoUpdate({
+          target: schema.id,
+          set: {
+            title: file.title,
+            page: file.page,
+            chapter: file.chapter,
+            content: file.content,
+            embedding,
+          },
+        });
 
-    console.log(`Processed ${file.id}`);
+      console.log(`Processed ${book.sport} ${book.year} ${file.id}`);
+    }
+
+    console.log(
+      `${book.sport} ${book.year} MDX embeddings seeded successfully!`,
+    );
   }
-
-  console.log("MDX embeddings seeded successfully!");
 }
 
 main()

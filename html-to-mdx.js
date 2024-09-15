@@ -139,9 +139,43 @@ async function processHtmlFiles(inputDir, outputDir) {
   }
 }
 
-// Define input and output directories
-const inputDirectory = "src/app/assets/books/basketball/2023-24/xhtml";
-const outputDirectory = "src/app/assets/books/basketball/2023-24/mdx";
+// Define base directories
+const baseInputDirectory = "src/app/assets/books";
+const baseOutputDirectory = "src/app/assets/books";
 
-// Run the conversion process
-processHtmlFiles(inputDirectory, outputDirectory);
+const books = [
+  { sport: "basketball", year: "2023-24", processed: true },
+  { sport: "volleyball", year: "2023-24", processed: false },
+];
+
+// Process each book
+async function processBooks() {
+  for (const book of books) {
+    if (!book.processed) {
+      const inputDirectory = path.join(
+        baseInputDirectory,
+        book.sport,
+        book.year,
+        "html",
+      );
+      const outputDirectory = path.join(
+        baseOutputDirectory,
+        book.sport,
+        book.year,
+        "mdx",
+      );
+
+      console.log(`Processing ${book.sport} ${book.year}...`);
+      await processHtmlFiles(inputDirectory, outputDirectory);
+      book.processed = true;
+      console.log(`Finished processing ${book.sport} ${book.year}.`);
+    } else {
+      console.log(`Skipping ${book.sport} ${book.year} (already processed).`);
+    }
+  }
+}
+
+// Run the conversion process for all books
+processBooks().catch((error) =>
+  console.error("Error processing books:", error),
+);
