@@ -3,6 +3,7 @@ import fs from "fs/promises";
 import matter from "gray-matter";
 import path from "path";
 import { openai } from "./openai";
+import { mkdir } from "fs/promises";
 
 export interface BookConfig {
   mdxDir: string;
@@ -74,6 +75,9 @@ Ensure that all rules, numbering, and information are preserved exactly as they 
 async function processAllFiles(config: BookConfig) {
   const mdxFiles = await getMdxFiles(config.mdxDir);
 
+  // Create the output directory if it doesn't exist
+  await mkdir(config.outputDir, { recursive: true });
+
   for (const file of mdxFiles) {
     console.log(`Processing ${file}...`);
     const filePath = path.join(config.mdxDir, file);
@@ -92,6 +96,9 @@ async function processAllFiles(config: BookConfig) {
 }
 
 export async function convertMdxToMd(config: BookConfig) {
+  if (config.processed) {
+    return;
+  }
   try {
     await processAllFiles(config);
   } catch (error) {

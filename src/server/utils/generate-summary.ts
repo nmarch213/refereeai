@@ -1,6 +1,5 @@
 import { config } from "dotenv";
-import { generateBookSummary } from "./organize-book-info";
-import { BookConfig, convertMdxToMd } from "./convert-mdx-to-md";
+import { type BookConfig, convertMdxToMd } from "./convert-mdx-to-md";
 
 config();
 // npx tsx -r dotenv/config --env-file=.env.local src/server/utils/generate-summary.ts
