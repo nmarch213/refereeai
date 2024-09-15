@@ -11,11 +11,21 @@ import { openai } from "../../../utils/openai";
 import matter from "gray-matter";
 
 const books = [
-  { sport: "basketball", year: "2023-24", processed: true },
-  { sport: "volleyball", year: "2023-24", processed: false },
+  {
+    sport: "basketball",
+    year: "2023-24",
+    processed: true,
+    schema: basketball202324,
+  },
+  {
+    sport: "volleyball",
+    year: "2023-24",
+    processed: false,
+    schema: volleyball202324,
+  },
 ];
 
-async function getMdxFiles() {
+async function getMdxFiles(MDX_DIR: string) {
   const files = await fs.readdir(MDX_DIR);
   const mdxFiles = files.filter((file) => file.endsWith(".mdx"));
 
@@ -48,8 +58,7 @@ async function main() {
     if (!book.processed) continue;
 
     const MDX_DIR = `src/app/assets/books/${book.sport}/${book.year}/mdx`;
-    const schema =
-      book.sport === "basketball" ? basketball202324 : volleyball202324;
+    const schema = book.schema;
 
     try {
       const existingEntry = await db.query[schema].findFirst();
@@ -67,7 +76,7 @@ async function main() {
       throw error;
     }
 
-    const mdxFiles = await getMdxFiles();
+    const mdxFiles = await getMdxFiles(MDX_DIR);
 
     for (const file of mdxFiles) {
       const embedding = await generateEmbedding(file.fullContent);

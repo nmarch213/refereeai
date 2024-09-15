@@ -187,7 +187,7 @@ const baseInputDirectory = "src/app/assets/books";
 const baseOutputDirectory = "src/app/assets/books";
 
 const books = [
-  { sport: "basketball", year: "2023-24", processed: true },
+  { sport: "basketball", year: "2023-24", processed: false },
   { sport: "volleyball", year: "2023-24", processed: false },
 ];
 
