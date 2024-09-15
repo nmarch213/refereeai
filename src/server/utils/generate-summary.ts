@@ -12,13 +12,13 @@ const configs: BookConfig[] = [
     mdxDir: "src/app/assets/books/basketball/2023-24/mdx",
     outputDir: "src/app/assets/books/basketball/2023-24/md",
     bookType: "NFHS Basketball Rulebook",
-    processed: true,
+    processed: false,
   },
   {
     mdxDir: "src/app/assets/books/volleyball/2023-24/mdx",
     outputDir: "src/app/assets/books/volleyball/2023-24/md",
     bookType: "NFHS Volleyball Rulebook",
-    processed: false,
+    processed: true,
   },
 ];
 
