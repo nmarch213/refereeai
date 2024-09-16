@@ -48,18 +48,25 @@ export async function POST(req: Request) {
     .limit(5);
 
   const context = results
-    .map((doc) => `Page: ${doc.page}, Content: ${doc.content}`)
+    .map((doc) => `Page ${doc.page}: ${doc.content}`)
     .join("\n\n");
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   messages.push({
     role: "system",
-    content: `Context:\n${context}`,
+    content: `Context from the ${sport} Rule Book:\n${context}`,
   });
 
   const result = await streamText({
-    model: openai("gpt-4-turbo"),
-    system: `You are a helpful assistant knowledgeable about ${sport} rules and regulations.`,
+    model: openai("gpt-4o-mini"),
+    system: `You are a knowledgeable assistant specializing in ${sport} rules and regulations. Your responses should:
+1. Directly reference specific rules from the ${sport} Rule Book when applicable.
+2. Cite the page number and exact rule number (if available) for each reference.
+3. Provide clear explanations of the rules and their applications.
+4. If a question cannot be answered with the given context, state that and suggest where to find more information.
+5. Use official terminology from the ${sport} Rule Book.
+
+Always base your answers on the official rules provided in the context. If you're unsure or if the information isn't in the context, say so.`,
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     messages: convertToCoreMessages(messages),
   });
