@@ -1,7 +1,3 @@
-Here's the updated markdown content with internal links added between related Rules and Sections:
-
-markdown
-
 # Basketball Officiating Rules
 
 ## Table of Contents
