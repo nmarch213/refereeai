@@ -2,14 +2,25 @@ import { openai } from "@ai-sdk/openai";
 import { convertToCoreMessages, embed, streamText } from "ai";
 import { sql, desc, cosineDistance, gt } from "drizzle-orm";
 import { db } from "~/server/db";
-import { basketball202324 } from "~/server/db/schema";
+import { basketball202324, volleyball202324 } from "~/server/db/schema";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+const sports = {
+  basketball: basketball202324,
+  volleyball: volleyball202324,
+};
+
 export async function POST(req: Request) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const { messages } = await req.json();
+  const { messages, sport } = await req.json();
+
+  if (!sports[sport as keyof typeof sports]) {
+    return new Response("Invalid sport", { status: 400 });
+  }
+
+  const sportSchema = sports[sport as keyof typeof sports];
 
   const { embedding } = await embed({
     model: openai.embedding("text-embedding-ada-002"),
@@ -18,29 +29,26 @@ export async function POST(req: Request) {
       .map((m) => m.content)
       .join("\n"),
   });
+
   const similarity = sql<number>`1 - (${cosineDistance(
-    basketball202324.embedding,
+    sportSchema.embedding,
     embedding,
   )})`;
+
   const results = await db
     .select({
-      id: basketball202324.id,
-      title: basketball202324.title,
-      page: basketball202324.page,
-      chapter: basketball202324.chapter,
-      content: basketball202324.content,
+      id: sportSchema.id,
+      page: sportSchema.page,
+      content: sportSchema.content,
       similarity,
     })
-    .from(basketball202324)
+    .from(sportSchema)
     .where(gt(similarity, 0.5))
     .orderBy((t) => desc(t.similarity))
     .limit(5);
 
   const context = results
-    .map(
-      (doc) =>
-        `Title: ${doc.title}, Page: ${doc.page}, Content: ${doc.content}`,
-    )
+    .map((doc) => `Page: ${doc.page}, Content: ${doc.content}`)
     .join("\n\n");
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
@@ -51,8 +59,7 @@ export async function POST(req: Request) {
 
   const result = await streamText({
     model: openai("gpt-4-turbo"),
-    system:
-      "You are a helpful assistant knowledgeable about basketball rules and regulations.",
+    system: `You are a helpful assistant knowledgeable about ${sport} rules and regulations.`,
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     messages: convertToCoreMessages(messages),
   });

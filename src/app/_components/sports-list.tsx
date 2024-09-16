@@ -17,6 +17,11 @@ const sports = [
     slug: "football",
   },
   {
+    name: "Volleyball",
+    image: "/placeholder.svg?height=100&width=200",
+    slug: "volleyball",
+  },
+  {
     name: "Basketball",
     image: "/placeholder.svg?height=100&width=200",
     slug: "basketball",

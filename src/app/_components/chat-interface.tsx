@@ -15,7 +15,10 @@ import { Send } from "lucide-react";
 
 export default function ChatInterface({ sport }: { sport: string }) {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
-    keepLastMessageOnError: true,
+    api: "/api/chat",
+    body: {
+      sport,
+    },
   });
 
   return (
