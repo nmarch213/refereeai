@@ -33,18 +33,11 @@ async function getMdxFiles(MDX_DIR: string) {
     mdxFiles.map(async (file) => {
       const content = await fs.readFile(path.join(MDX_DIR, file), "utf-8");
       const { data, content: mdxContent } = matter(content);
-      const cleanedContent = mdxContent
-        .replace(/\n+/g, " ") // Replace multiple newlines with a single space
-        .replace(/\s+/g, " ") // Replace multiple spaces with a single space
-        .trim(); // Remove leading and trailing whitespace
-      const metadata = `Title: ${data.title || ""}, Page: ${data.page || ""}, Chapter: ${data.chapter || ""}`;
-      const fullContent = `${metadata}. ${cleanedContent}`;
+      const metadata = `Page: ${data.page || ""}`;
+      const fullContent = `${metadata}. ${mdxContent}`;
       return {
         id: file.replace(".mdx", ""),
-        title: data.title || "",
         page: data.page || "",
-        chapter: data.chapter || "",
-        content: cleanedContent,
         fullContent: fullContent,
       };
     }),
@@ -70,14 +63,14 @@ async function main() {
         .values({
           id: `${book.sport}_${book.year}_${file.id}`,
           page: file.page,
-          content: file.content,
+          content: file.fullContent,
           embedding,
         })
         .onConflictDoUpdate({
           target: schema.id,
           set: {
             page: file.page,
-            content: file.content,
+            content: file.fullContent,
             embedding,
           },
         });
