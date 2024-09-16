@@ -20,23 +20,23 @@ const books = [
   {
     sport: "volleyball",
     year: "2023-24",
-    processed: false,
+    processed: true,
     schema: volleyball202324,
   },
 ];
 
-async function getMdxFiles(MDX_DIR: string) {
-  const files = await fs.readdir(MDX_DIR);
-  const mdxFiles = files.filter((file) => file.endsWith(".mdx"));
+async function getMdFiles(MD_DIR: string) {
+  const files = await fs.readdir(MD_DIR);
+  const mdFiles = files.filter((file) => file.endsWith(".md"));
 
   const fileContents = await Promise.all(
-    mdxFiles.map(async (file) => {
-      const content = await fs.readFile(path.join(MDX_DIR, file), "utf-8");
-      const { data, content: mdxContent } = matter(content);
+    mdFiles.map(async (file) => {
+      const content = await fs.readFile(path.join(MD_DIR, file), "utf-8");
+      const { data, content: mdContent } = matter(content);
       const metadata = `Page: ${data.page || ""}`;
-      const fullContent = `${metadata}. ${mdxContent}`;
+      const fullContent = `${metadata}. ${mdContent}`;
       return {
-        id: file.replace(".mdx", ""),
+        id: file.replace(".md", ""),
         page: data.page || "",
         fullContent: fullContent,
       };
@@ -48,14 +48,14 @@ async function getMdxFiles(MDX_DIR: string) {
 
 async function main() {
   for (const book of books) {
-    if (!book.processed) continue;
+    if (book.processed) continue;
 
-    const MDX_DIR = `src/app/assets/books/${book.sport}/${book.year}/mdx`;
+    const MD_DIR = `src/app/assets/books/${book.sport}/${book.year}/md`;
     const schema = book.schema;
 
-    const mdxFiles = await getMdxFiles(MDX_DIR);
+    const mdFiles = await getMdFiles(MD_DIR);
 
-    for (const file of mdxFiles) {
+    for (const file of mdFiles) {
       const embedding = await generateEmbedding(file.fullContent);
 
       await db
@@ -79,7 +79,7 @@ async function main() {
     }
 
     console.log(
-      `${book.sport} ${book.year} MDX embeddings seeded successfully!`,
+      `${book.sport} ${book.year} MD embeddings seeded successfully!`,
     );
   }
 }
