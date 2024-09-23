@@ -1,6 +1,7 @@
 "use client";
 
 import { useChat } from "ai/react";
+import Markdown from "react-markdown";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { ScrollArea } from "~/components/ui/scroll-area";
@@ -42,7 +43,11 @@ export default function ChatInterface({ sport }: { sport: string }) {
                     : "bg-secondary text-secondary-foreground"
                 }`}
               >
-                {message.content}
+                {message.role === "user" ? (
+                  message.content
+                ) : (
+                  <Markdown>{message.content}</Markdown>
+                )}
               </div>
             </div>
           ))}

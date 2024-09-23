@@ -66,7 +66,7 @@ export default function SportsCards() {
               <CardTitle className="mb-2 text-xl">{sport.name}</CardTitle>
             </CardContent>
             <CardFooter className="flex justify-between bg-secondary p-4">
-              <Link href={`/${sport.slug}/chat`} passHref>
+              <Link href={`/${sport.slug}/question`} passHref>
                 <Button variant="ghost" size="sm" asChild>
                   <span>
                     <HelpCircle className="mr-2 h-4 w-4" />
@@ -74,13 +74,15 @@ export default function SportsCards() {
                   </span>
                 </Button>
               </Link>
-              <Button variant="ghost" size="sm">
-                <Book className="mr-2 h-4 w-4" />
-                View Rules
-              </Button>
+              <Link href={`/${sport.slug}/chat`} passHref>
+                <Button variant="ghost" size="sm">
+                  <Book className="mr-2 h-4 w-4" />
+                  Chat with Rules
+                </Button>
+              </Link>
               <Button variant="ghost" size="sm">
                 <MoreHorizontal className="mr-2 h-4 w-4" />
-                View Other
+                View Rules
               </Button>
             </CardFooter>
           </Card>

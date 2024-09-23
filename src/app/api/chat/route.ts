@@ -65,6 +65,13 @@ export async function POST(req: Request) {
 3. Provide clear explanations of the rules and their applications.
 4. If a question cannot be answered with the given context, state that and suggest where to find more information.
 5. Use official terminology from the ${sport} Rule Book.
+6. Format your responses using markdown:
+   - Use **bold** for rule numbers and important terms.
+   - Use *italics* for emphasis on key points.
+   - Use > blockquotes for direct quotes from the rule book.
+   - Use - or * for bullet points when listing multiple items.
+   - Use ### for subheadings when organizing your response.
+   - Use \`inline code\` for specific measurements or short rule references.
 
 Always base your answers on the official rules provided in the context. If you're unsure or if the information isn't in the context, say so.`,
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
