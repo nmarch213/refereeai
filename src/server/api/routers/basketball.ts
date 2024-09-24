@@ -2,7 +2,7 @@ import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { db } from "~/server/db";
 import { basketball202324 } from "~/server/db/schema";
-import { sql, eq, desc } from "drizzle-orm";
+import { sql, desc } from "drizzle-orm";
 import { embed, generateText } from "ai";
 import { openai } from "~/server/utils/openai";
 
@@ -20,9 +20,7 @@ async function similaritySearch(query: string, topK = 5) {
   const results = await db
     .select({
       id: basketball202324.id,
-      title: basketball202324.title,
       page: basketball202324.page,
-      chapter: basketball202324.chapter,
       content: basketball202324.content,
       similarity:
         sql<number>`1 - (${basketball202324.embedding} <=> ${queryEmbedding}::vector)`.as(
@@ -40,10 +38,7 @@ async function basketballChat(userQuery: string) {
   const relevantDocs = await similaritySearch(userQuery);
 
   const context = relevantDocs
-    .map(
-      (doc) =>
-        `Title: ${doc.title}, Page: ${doc.page}, Content: ${doc.content}`,
-    )
+    .map((doc) => `Page: ${doc.page}, Content: ${doc.content}`)
     .join("\n\n");
 
   const { text } = await generateText({
