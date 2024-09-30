@@ -8,24 +8,9 @@ export const metadata: Metadata = {
 
 const sports = [
   {
-    id: "football",
-    name: "Football",
-    description: "American football, a game of strategy and physical prowess.",
-  },
-  {
     id: "basketball",
     name: "Basketball",
     description: "A fast-paced game played on a court with two teams.",
-  },
-  {
-    id: "tennis",
-    name: "Tennis",
-    description: "A racket sport played individually or in pairs.",
-  },
-  {
-    id: "soccer",
-    name: "Soccer",
-    description: "Also known as football, the world's most popular sport.",
   },
   {
     id: "volleyball",

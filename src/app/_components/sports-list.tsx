@@ -12,11 +12,6 @@ import {
 
 const sports = [
   {
-    name: "Football",
-    image: "/placeholder.svg?height=100&width=200",
-    slug: "football",
-  },
-  {
     name: "Volleyball",
     image: "/placeholder.svg?height=100&width=200",
     slug: "volleyball",
@@ -25,26 +20,6 @@ const sports = [
     name: "Basketball",
     image: "/placeholder.svg?height=100&width=200",
     slug: "basketball",
-  },
-  {
-    name: "Tennis",
-    image: "/placeholder.svg?height=100&width=200",
-    slug: "tennis",
-  },
-  {
-    name: "Soccer",
-    image: "/placeholder.svg?height=100&width=200",
-    slug: "soccer",
-  },
-  {
-    name: "Baseball",
-    image: "/placeholder.svg?height=100&width=200",
-    slug: "baseball",
-  },
-  {
-    name: "Golf",
-    image: "/placeholder.svg?height=100&width=200",
-    slug: "golf",
   },
 ];
 
