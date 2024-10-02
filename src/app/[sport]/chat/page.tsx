@@ -44,12 +44,10 @@ export default function SportRulebookChat({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <main className="container mx-auto flex-grow px-4 py-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="md:col-span-2">
-            <MDXBookPage sport={sport.id} year={sport.year} />
-            <ChatInterface sport={sport.id} />
-          </div>
+      <main className="flex-grow">
+        <div className="w-full">
+          <MDXBookPage sport={sport.id} year={sport.year} />
+          <ChatInterface sport={sport.id} />
         </div>
       </main>
     </div>
