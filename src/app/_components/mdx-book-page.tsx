@@ -3,6 +3,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import type { Sport } from "../_models/sports";
 import type { BookYear } from "../_models/years";
+import dynamic from "next/dynamic";
 
 const components = {
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -25,12 +26,6 @@ const components = {
   ),
   li: (props: React.HTMLAttributes<HTMLLIElement>) => (
     <li className="mb-1" {...props} />
-  ),
-  a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-    <a
-      className="text-blue-600 hover:underline dark:text-blue-400"
-      {...props}
-    />
   ),
   blockquote: (props: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
