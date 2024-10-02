@@ -1,0 +1,770 @@
+[
+  [
+    {
+      "text": "Either type of backboard may be transparent.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "Either type of backboard may be nontransparent.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No logo is permitted on the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No marking is permitted on the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No lettering is permitted on the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No logo is permitted on the backboard padding.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No marking is permitted on the backboard padding.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No lettering is permitted on the backboard padding.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No logo is permitted on the basket.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No marking is permitted on the basket.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "No lettering is permitted on the basket.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "4"
+      }
+    },
+    {
+      "text": "Each backboard shall be midway between the sidelines.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The plane of the front face of each backboard shall be perpendicular to the floor.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The plane of the front face of each backboard shall be parallel to the end line.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "1"
+      }
+    },
+    {
+      "text": "Each backboard shall be 4 feet from the end line.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The upper edge of the rectangular backboard shall be 13 feet above the floor.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The upper edge of the fan-shaped backboard shall be 12 feet 8 inches above the floor.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The backboard shall be protected from spectators to a distance of at least 3 feet at each end.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "8",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The bottom of all rectangular backboards shall be padded with a poly high-carb vinyl-type material.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The poly high-carb vinyl-type material must meet the Bashor resilience test with a range of 20-30.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding shall cover the bottom surface of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding shall cover the side surface of the backboard to a distance of 15 inches up from the bottom.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The front surface of the backboard shall be covered to a minimum distance of ¾ inch from the bottom of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The back surface of the backboard shall be covered to a minimum distance of ¾ inch from the bottom of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding shall be 1 inch thick from the front surface of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding shall be 1 inch thick from the back surface of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding material shall be 2 inches from the bottom edge of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding is recommended to be mounted on the backboard by adhesive or material such as Velcro or channel.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding shall be a single, solid color.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The padding shall be the same color on both backboards.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "9",
+        "article": "1"
+      }
+    }
+  ],
+  [
+    {
+      "text": "Any backboard support behind the backboard shall be padded on the bottom surface to a distance of 2 feet from the face of the backboard if the height is less than 9 feet above the floor.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "2"
+      }
+    },
+    {
+      "text": "All portable backstops shall have the bases padded to a height of 7 feet on the court-side surface.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "2"
+      }
+    },
+    {
+      "text": "All support systems should be at least 8 feet behind the plane of the backboard face and at a height of 7 feet or more above the floor.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "3"
+      }
+    },
+    {
+      "text": "Any backboard support that is not directly behind the backboard should be at least 6 inches behind it if the support extends above the top.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "4"
+      }
+    },
+    {
+      "text": "Any backboard support that is not directly behind the backboard should be at least 2 feet behind it if the support extends beyond the side.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "4"
+      }
+    },
+    {
+      "text": "Any overhead backboard support structure that is forward-braced due to space limitations shall meet specific requirements.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "4"
+      }
+    },
+    {
+      "text": "A front, diagonal-brace system shall be located above a line extending upward and into the playing court at a maximum 45-degree angle from a point on a vertical line located a minimum of 6 inches behind the front side of the backboard at a minimum height of 4 feet 6 inches above the basket ring.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "4"
+      }
+    },
+    {
+      "text": "Manufacturers and administrators should be aware of an 'extreme-caution' warning relative to the misuse of portable backstops.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "5"
+      }
+    },
+    {
+      "text": "A high degree of injury potential and a severe liability problem exists when players or spectators are allowed to hang, sit or stand on the basket ring or backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "5"
+      }
+    },
+    {
+      "text": "Administrators shall see that the practice of hanging, sitting, or standing on the basket ring or backboard is eliminated or that the portable units are lowered at the completion of the game.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "5"
+      }
+    },
+    {
+      "text": "There is a high risk of severe injury, even death, if the practice of hanging, sitting, or standing on the basket ring or backboard is allowed to occur.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "5"
+      }
+    },
+    {
+      "text": "A recommended warning or inscription such as 'Danger – please do not get on the ring/backboard' is desirable.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "5"
+      }
+    },
+    {
+      "text": "Each basket shall consist of a single metal ring with an inside diameter of 18 inches, its flange and braces, and a white-cord 12-mesh net that is 15 to 18 inches in length, suspended from beneath the ring.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "1"
+      }
+    },
+    {
+      "text": "Each ring shall not be more than 5/8 inch in diameter, with the possible addition of small-gauge loops on the bottom edge for attaching a 12-mesh net.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The ring and its attaching flange and braces shall be bright orange in color.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The cord of the net shall be not less than 120-thread nor more than 144-thread twine, or plastic material of comparable dimensions with no additional extensions.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "3"
+      }
+    },
+    {
+      "text": "The cord of the net shall be constructed to momentarily check the ball as it passes through.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "10",
+        "article": "3"
+      }
+    },
+    {
+      "text": "Each basket ring shall be securely attached to the backboard/support system with a ring-restraining device.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The ring-restraining device shall ensure that the basket stays attached in the event a glass backboard breaks.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "1"
+      }
+    }
+  ],
+  [
+    {
+      "text": "The upper edge of the basketball rim shall be 10 feet above and parallel to the floor.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The upper edge of the basketball rim shall be equidistant from the vertical edges of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The nearest point of the inside edge of the basketball rim shall be 6 inches from the plane of the face of the backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "1"
+      }
+    },
+    {
+      "text": "Positive-lock breakaway rings are legal.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "2"
+      }
+    },
+    {
+      "text": "Flex breakaway rings are legal.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "2"
+      }
+    },
+    {
+      "text": "Fixed rings are legal.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "2"
+      }
+    },
+    {
+      "text": "Breakaway basket rings shall have rebound characteristics similar to those of fixed rings.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The pressure-release mechanism of breakaway basket rings should ensure rebound characteristics and protect both the ring and backboard.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The design of the basketball ring and its construction should ensure player safety.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "2"
+      }
+    },
+    {
+      "text": "For basketball rings with a breakaway mechanism, the pressure-release mechanism shall be preset so that the rings do not deflect more than ½ inch when subjected to a static load of 50 pounds.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "3"
+      }
+    },
+    {
+      "text": "The pressure-release mechanism of basketball rings may be sealed or field adjustable.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "3"
+      }
+    },
+    {
+      "text": "When released, the positive-lock breakaway ring shall not rotate more than 30 degrees below the original horizontal position.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "3"
+      }
+    },
+    {
+      "text": "After release and with the load no longer applied, the basketball ring shall return automatically and instantaneously to the original position.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "3"
+      }
+    },
+    {
+      "text": "It is recommended that schools have the basketball rings tested for rules compliance.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "11",
+        "article": "3"
+      }
+    },
+    {
+      "text": "The basketball shall meet the following specifications:",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The solid color of the basketball shall be Pantone Matching System (PMS) Orange 151, Red-Orange 173, or Brown 1535.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The basketball shall be spherical.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The basketball shall have a deeply-pebbled, granulated surface with horizontally shaped panels bonded tightly to the rubber carcass.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The circumference of the basketball shall be within a minimum of 29½ inches to a maximum of 30 inches for high school boys competition.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The circumference of the basketball shall be within a minimum of 28½ inches to a maximum of 29 inches for high school girls competition.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The weight of the basketball shall be within a minimum of 20 ounces to a maximum of 22 ounces for high school boys competition.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The weight of the basketball shall be within a minimum of 18 ounces to a maximum of 20 ounces for high school girls competition.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The black rubber rib separating the panels of the basketball shall not exceed ¼ inch in width.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The basketball shall include the NFHS Authenticating Mark.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The NFHS Authenticating Mark can be displayed in either format shown in Diagram 3.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    },
+    {
+      "text": "A current list of NFHS authenticated products can be found on the website, nfhs.org, under \"Resources.\"",
+      "ruleReference": {
+        "rule": "1",
+        "section": "12",
+        "article": "1"
+      }
+    }
+  ],
+  [
+    {
+      "text": "The ball shall be inflated to an air pressure such that when the ball is dropped to the playing surface from a height of 6 feet, measured to the bottom of the ball, the ball shall rebound to a height, measured to the top of the ball, of not less than 49 inches when the ball strikes on its least resilient spot.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The ball shall rebound to a height, measured to the top of the ball, of not more than 54 inches when the ball strikes on its most resilient spot.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "To be legal, the air pressure which will give the required reaction shall be stamped on the ball.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The pressure for game use shall make the ball bounce legally.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The home team shall provide a ball which meets the specifications.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "3"
+      }
+    },
+    {
+      "text": "The referee shall be the sole judge of the legality of the ball.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "3"
+      }
+    },
+    {
+      "text": "The referee may select a ball provided by the visiting team.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "3"
+      }
+    },
+    {
+      "text": "The location of each team's bench shall be designated by game management.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "1"
+      }
+    },
+    {
+      "text": "It is recommended that the benches for team members and coaches of both teams be placed along that side of the court on which the scorer's and timer's table is located.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "1"
+      }
+    },
+    {
+      "text": "The coaching box shall be outlined outside the side of the court on which the scorer's and timer's table and team benches are located.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The area of the coaching box shall be bounded by a line drawn 28 feet from the end line towards the division line.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "A line, perpendicular to the 28-foot line and placed at each end, with a minimum length of 2 feet, shall be extended toward the team bench so that the coaching box boundary is evident.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "These lines shall be located off the court and be 2 inches wide.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The same directions should be followed for the other side of the scorer's and timer's table.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "2"
+      }
+    },
+    {
+      "text": "The time-out area shall be the area inside an imaginary rectangle formed by the boundaries of the sideline (including the bench), end line, and an imaginary line extended from the free-throw lane line nearest the bench area meeting an imaginary line extended from the coaching-box line.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "13",
+        "article": "3"
+      }
+    },
+    {
+      "text": "A red light behind each backboard or an LED light on each backboard is permitted to signal that time has expired for a quarter or extra period.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "14",
+        "article": "1"
+      }
+    },
+    {
+      "text": "In facilities without a red light behind or an LED light on each backboard, the audible timer's signal shall indicate that time has expired.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "14",
+        "article": "1"
+      }
+    },
+    {
+      "text": "A visible game clock and scoreboard are mandatory.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "15",
+        "article": "1"
+      }
+    },
+    {
+      "text": "An alternate timing device and scoring information system shall be available in the event of malfunction.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "15",
+        "article": "1"
+      }
+    },
+    {
+      "text": "A visible display shall be located at the scorer's and timer's table to indicate team possession for the alternating-possession procedure.",
+      "ruleReference": {
+        "rule": "1",
+        "section": "16",
+        "article": "1"
+      }
+    }
+  ]
+]
