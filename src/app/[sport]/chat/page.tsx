@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 import ChatInterface from "../../_components/chat-interface";
 import { MDXBookPage } from "~/app/_components/mdx-book-page";
 import type { Sport } from "~/app/_models/sports";
-import { BookYear } from "~/app/_models/years";
+import type { BookYear } from "~/app/_models/years";
 
 export const metadata: Metadata = {
   title: "Sport Rulebook Chat",
@@ -45,8 +45,8 @@ export default function SportRulebookChat({
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-grow">
-        <div className="w-full">
-          <MDXBookPage sport={sport.id} year={sport.year} />
+        <div className="h-full w-full p-4">
+          {/* <MDXBookPage sport={sport.id} year={sport.year} /> */}
           <ChatInterface sport={sport.id} />
         </div>
       </main>
