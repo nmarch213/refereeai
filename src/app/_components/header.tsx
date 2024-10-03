@@ -7,7 +7,7 @@ export async function Header() {
 
   return (
     <header className="flex h-14 items-center justify-between px-4 lg:px-6">
-      <Link className="flex items-center justify-center gap-4" href="#">
+      <Link className="flex items-center justify-center gap-4" href="/">
         <WhistleLogo className="h-8 w-8" />
         <span className="font-bold">Referee AI</span>
       </Link>
