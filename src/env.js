@@ -24,8 +24,8 @@ export const env = createEnv({
       process.env.VERCEL ? z.string() : z.string().url(),
     ),
     // Add Facebook-related variables
-    FACEBOOK_CLIENT_ID: z.string(),
-    FACEBOOK_CLIENT_SECRET: z.string(),
+    GOOGLE_CLIENT_ID: z.string(),
+    GOOGLE_CLIENT_SECRET: z.string(),
     // Add new environment variables
     POSTGRES_PRISMA_URL: z.string().url(),
     POSTGRES_URL_NO_SSL: z.string(),
@@ -55,8 +55,8 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-    FACEBOOK_CLIENT_ID: process.env.FACEBOOK_CLIENT_ID,
-    FACEBOOK_CLIENT_SECRET: process.env.FACEBOOK_CLIENT_SECRET,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     POSTGRES_PRISMA_URL: process.env.POSTGRES_PRISMA_URL,
     POSTGRES_URL_NO_SSL: process.env.POSTGRES_URL_NO_SSL,
     POSTGRES_URL_NON_POOLING: process.env.POSTGRES_URL_NON_POOLING,
