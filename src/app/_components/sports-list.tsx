@@ -13,12 +13,13 @@ import {
 const sports = [
   {
     name: "Volleyball",
-    image: "/placeholder.svg?height=100&width=200",
+    image:
+      "https://images.pexels.com/photos/17397548/pexels-photo-17397548/free-photo-of-women-playing-volleyball.jpeg",
     slug: "volleyball",
   },
   {
     name: "Basketball",
-    image: "/placeholder.svg?height=100&width=200",
+    image: "https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg",
     slug: "basketball",
   },
 ];
@@ -31,14 +32,15 @@ export default function SportsCards() {
           <Card key={sport.name} className="overflow-hidden">
             <CardHeader className="p-0">
               <Image
+                priority
                 src={sport.image}
                 alt={sport.name}
-                width={200}
-                height={100}
+                height={200}
+                width={400}
               />
             </CardHeader>
             <CardContent className="p-4">
-              <CardTitle className="mb-2 text-xl">{sport.name}</CardTitle>
+              <CardTitle className="text-xl">{sport.name}</CardTitle>
             </CardContent>
             <CardFooter className="flex justify-between bg-secondary p-4">
               <Link href={`/${sport.slug}/question`} passHref>
