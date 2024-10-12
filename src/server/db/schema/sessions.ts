@@ -1,7 +1,8 @@
 import { relations } from "drizzle-orm";
-import { index, varchar, timestamp } from "drizzle-orm/pg-core";
-import { createTable } from "./index";
+import { index, varchar, timestamp, pgTableCreator } from "drizzle-orm/pg-core";
 import { users } from "./users";
+
+const createTable = pgTableCreator((name) => `ref_${name}`);
 
 export const sessions = createTable(
   "session",

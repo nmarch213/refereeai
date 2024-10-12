@@ -1,5 +1,11 @@
-import { primaryKey, varchar, timestamp } from "drizzle-orm/pg-core";
-import { createTable } from "./index";
+import {
+  pgTableCreator,
+  primaryKey,
+  varchar,
+  timestamp,
+} from "drizzle-orm/pg-core";
+
+const createTable = pgTableCreator((name) => `ref_${name}`);
 
 export const verificationTokens = createTable(
   "verification_token",

@@ -1,8 +1,16 @@
 import { relations } from "drizzle-orm";
-import { index, integer, primaryKey, varchar, text } from "drizzle-orm/pg-core";
-import { createTable } from "./index";
+import {
+  pgTableCreator,
+  index,
+  integer,
+  primaryKey,
+  varchar,
+  text,
+} from "drizzle-orm/pg-core";
 import { users } from "./users";
 import { type AdapterAccount } from "next-auth/adapters";
+
+const createTable = pgTableCreator((name) => `ref_${name}`);
 
 export const accounts = createTable(
   "account",

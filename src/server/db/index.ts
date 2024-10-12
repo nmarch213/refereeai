@@ -5,6 +5,9 @@ import * as schema from "./schema";
 import { sql } from "@vercel/postgres";
 import { config } from "dotenv";
 import { env } from "~/env";
+import { pgTableCreator } from "drizzle-orm/pg-core";
+
+export const createTable = pgTableCreator((name) => `ref_${name}`);
 
 /**
  * Cache the database connection in development. This avoids creating a new connection on every HMR

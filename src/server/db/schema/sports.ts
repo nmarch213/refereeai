@@ -1,34 +1,100 @@
-import { index, varchar, text, vector } from "drizzle-orm/pg-core";
-import { createTable } from "./index";
+import { sql, relations } from "drizzle-orm";
+import { pgTableCreator } from "drizzle-orm/pg-core";
+import {
+  varchar,
+  timestamp,
+  integer,
+  vector,
+  index,
+  text,
+} from "drizzle-orm/pg-core";
 
-export const basketball202324 = createTable(
-  "basketball_2023-24",
+const createTable = pgTableCreator((name) => `ref_${name}`);
+
+export const governingBodies = createTable("governing_body", {
+  id: varchar("id", { length: 255 })
+    .notNull()
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  name: varchar("name", { length: 255 }).notNull(),
+  abbreviation: varchar("abbreviation", { length: 50 }),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .default(sql`CURRENT_TIMESTAMP`)
+    .notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+    () => new Date(),
+  ),
+});
+
+export const sports = createTable("sport", {
+  id: varchar("id", { length: 255 })
+    .notNull()
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  name: varchar("name", { length: 255 }).notNull(),
+  governingBodyId: varchar("governing_body_id", { length: 255 })
+    .notNull()
+    .references(() => governingBodies.id),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .default(sql`CURRENT_TIMESTAMP`)
+    .notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+    () => new Date(),
+  ),
+});
+
+export const rulebooks = createTable(
+  "rulebook",
   {
-    id: varchar("id", { length: 255 }).primaryKey().notNull(),
-    page: varchar("page", { length: 255 }).notNull(),
+    id: varchar("id", { length: 255 })
+      .notNull()
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    sportId: varchar("sport_id", { length: 255 })
+      .notNull()
+      .references(() => sports.id),
+    year: integer("year").notNull(),
+    type: varchar("type", { length: 50 }).notNull(),
     content: text("content").notNull(),
     embedding: vector("embedding", { dimensions: 1536 }).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date(),
+    ),
   },
   (table) => ({
-    embeddingIndex: index().using(
+    sportYearTypeIdx: index("sport_year_type_idx").on(
+      table.sportId,
+      table.year,
+      table.type,
+    ),
+    embeddingIdx: index().using(
       "hnsw",
       table.embedding.op("vector_cosine_ops"),
     ),
   }),
 );
 
-export const volleyball202324 = createTable(
-  "volleyball_2023-24",
-  {
-    id: varchar("id", { length: 255 }).primaryKey().notNull(),
-    page: varchar("page", { length: 255 }).notNull(),
-    content: text("content").notNull(),
-    embedding: vector("embedding", { dimensions: 1536 }).notNull(),
-  },
-  (table) => ({
-    embeddingIndex: index().using(
-      "hnsw",
-      table.embedding.op("vector_cosine_ops"),
-    ),
+export const sportsRelations = relations(sports, ({ one, many }) => ({
+  governingBody: one(governingBodies, {
+    fields: [sports.governingBodyId],
+    references: [governingBodies.id],
+  }),
+  rulebooks: many(rulebooks),
+}));
+
+export const rulebooksRelations = relations(rulebooks, ({ one }) => ({
+  sport: one(sports, {
+    fields: [rulebooks.sportId],
+    references: [sports.id],
+  }),
+}));
+
+export const governingBodiesRelations = relations(
+  governingBodies,
+  ({ many }) => ({
+    sports: many(sports),
   }),
 );

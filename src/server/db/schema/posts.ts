@@ -1,7 +1,14 @@
-import { sql } from "drizzle-orm";
-import { index, serial, varchar, timestamp } from "drizzle-orm/pg-core";
-import { createTable } from "./index";
+import {
+  pgTableCreator,
+  index,
+  serial,
+  varchar,
+  timestamp,
+} from "drizzle-orm/pg-core";
 import { users } from "./users";
+import { sql } from "drizzle-orm";
+
+const createTable = pgTableCreator((name) => `ref_${name}`);
 
 export const posts = createTable(
   "post",

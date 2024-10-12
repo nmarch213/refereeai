@@ -6,7 +6,7 @@ import { env } from "~/env";
 config({ path: ".env" });
 
 export default {
-  schema: "./src/server/db/schema.ts",
+  schema: "./src/server/db/schema",
   dialect: "postgresql",
   dbCredentials: {
     url: env.POSTGRES_URL,
