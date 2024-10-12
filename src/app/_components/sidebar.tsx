@@ -19,6 +19,8 @@ import {
   Lock,
 } from "lucide-react";
 
+const currentYear = new Date().getFullYear();
+
 const sports = [
   { name: "Volleyball", subscribed: true },
   { name: "Football", subscribed: true },
@@ -26,7 +28,7 @@ const sports = [
   { name: "Basketball", subscribed: false },
 ];
 
-const subMenuItems = [
+export const subMenuItems = [
   { name: "Rulebook", href: "/rulebook", icon: Book },
   { name: "Chat with AI", href: "/chat", icon: MessageCircle },
   { name: "Video Discussions", href: "/videos", icon: Video },

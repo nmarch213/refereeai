@@ -7,6 +7,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { Header } from "~/app/_components/header";
 import { Footer } from "./_components/footer";
 import { Sidebar } from "./_components/sidebar";
+import { SportHeader } from "./_components/sport-header";
 import { getServerAuthSession } from "~/server/auth";
 
 export const metadata: Metadata = {
@@ -29,7 +30,10 @@ export default async function RootLayout({
             <div className="flex flex-1">
               {session && <Sidebar />}
               <main className="flex-1 overflow-y-auto">
-                <div className="container mx-auto py-6">{children}</div>
+                <div className="container mx-auto py-6">
+                  {/* SportHeader will be rendered in specific sport pages */}
+                  {children}
+                </div>
               </main>
             </div>
             <Footer />
