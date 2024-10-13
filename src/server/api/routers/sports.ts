@@ -1,8 +1,8 @@
+import { desc, eq } from "drizzle-orm";
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { db } from "~/server/db";
-import { governingBodies, sports, rulebooks } from "~/server/db/schema/sports";
-import { eq, and, desc, sql } from "drizzle-orm";
+import { governingBodies, rulebooks, sports } from "~/server/db/schema/sports";
 
 export const sportsRouter = createTRPCRouter({
   // Governing Bodies
@@ -99,31 +99,6 @@ export const sportsRouter = createTRPCRouter({
         .returning();
     }),
 
-  // Rulebooks
-  getRulebooksBySport: publicProcedure
-    .input(
-      z.object({
-        sportId: z.string(),
-        year: z.number().optional(),
-        type: z.string().optional(),
-      }),
-    )
-    .query(async ({ input }) => {
-      let query = db
-        .select()
-        .from(rulebooks)
-        .where(eq(rulebooks.sportId, input.sportId));
-
-      if (input.year) {
-        query = query.where(eq(rulebooks.year, input.year));
-      }
-      if (input.type) {
-        query = query.where(eq(rulebooks.type, input.type));
-      }
-
-      return query.orderBy(desc(rulebooks.year), rulebooks.type);
-    }),
-
   getRulebookById: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(async ({ input }) => {
@@ -184,28 +159,5 @@ export const sportsRouter = createTRPCRouter({
         .orderBy(desc(rulebooks.year), rulebooks.type);
 
       return { ...sport[0], rulebooks: rbs };
-    }),
-
-  searchRulebooks: publicProcedure
-    .input(
-      z.object({
-        sportId: z.string().optional(),
-        query: z.string(),
-        limit: z.number().default(10),
-      }),
-    )
-    .query(async ({ input }) => {
-      // This is a placeholder for a more advanced search implementation
-      // You might want to use full-text search or vector similarity search here
-      let query = db
-        .select()
-        .from(rulebooks)
-        .where(sql`${rulebooks.content} ilike ${`%${input.query}%`}`);
-
-      if (input.sportId) {
-        query = query.where(eq(rulebooks.sportId, input.sportId));
-      }
-
-      return query.limit(input.limit);
     }),
 });
