@@ -1,32 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "~/lib/utils";
-import { Button } from "~/components/ui/button";
-import { ScrollArea } from "~/components/ui/scroll-area";
 import {
-  LayoutDashboard,
   Book,
-  MessageCircle,
-  Video,
-  FileText,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
-  ChevronDown,
   ChevronUp,
-  Lock,
+  FileText,
+  LayoutDashboard,
+  MessageCircle,
+  Video,
 } from "lucide-react";
-
-const currentYear = new Date().getFullYear();
-
-const sports = [
-  { name: "Volleyball", subscribed: true },
-  { name: "Football", subscribed: true },
-  { name: "Soccer", subscribed: false },
-  { name: "Basketball", subscribed: false },
-];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Button } from "~/components/ui/button";
+import { ScrollArea } from "~/components/ui/scroll-area";
+import { cn } from "~/lib/utils";
+import { api } from "~/trpc/react";
 
 export const subMenuItems = [
   { name: "Rulebook", href: "/rulebook", icon: Book },
@@ -39,6 +30,8 @@ export function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [expandedSport, setExpandedSport] = useState<string | null>(null);
   const pathname = usePathname();
+
+  const { data: sports, isLoading } = api.sports.getAllSports.useQuery();
 
   const toggleSportExpansion = (sportName: string) => {
     setExpandedSport(expandedSport === sportName ? null : sportName);
@@ -88,48 +81,39 @@ export function Sidebar() {
               Dashboard
             </span>
           </Link>
-          {sports.map((sport) => (
-            <div key={sport.name}>
-              <Button
-                variant="ghost"
-                className={cn(
-                  "w-full justify-between px-3 py-2 text-sm font-medium",
-                  sport.subscribed
-                    ? "text-foreground"
-                    : "text-muted-foreground",
-                )}
-                onClick={() =>
-                  sport.subscribed && toggleSportExpansion(sport.name)
-                }
-              >
-                <span className="flex items-center">
-                  {sport.subscribed ? (
-                    expandedSport === sport.name ? (
+          {isLoading ? (
+            <div className="flex items-center justify-center py-4">
+              <span className="text-sm text-muted-foreground">Loading...</span>
+            </div>
+          ) : (
+            sports?.map((sport) => (
+              <div key={sport.id}>
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "w-full justify-between px-3 py-2 text-sm font-medium",
+                    "text-foreground",
+                  )}
+                  onClick={() => toggleSportExpansion(sport.name)}
+                >
+                  <span className="flex items-center">
+                    {expandedSport === sport.name ? (
                       <ChevronUp className="mr-2 h-4 w-4" />
                     ) : (
                       <ChevronDown className="mr-2 h-4 w-4" />
-                    )
-                  ) : (
-                    <Lock className="mr-2 h-4 w-4" />
-                  )}
-                  {!isCollapsed && sport.name}
-                </span>
-                {!sport.subscribed && !isCollapsed && (
-                  <span className="text-xs text-primary">Unlock</span>
-                )}
-              </Button>
-              {sport.subscribed &&
-                expandedSport === sport.name &&
-                !isCollapsed && (
+                    )}
+                    {!isCollapsed && sport.name}
+                  </span>
+                </Button>
+                {expandedSport === sport.name && !isCollapsed && (
                   <div className="ml-4 space-y-1">
                     {subMenuItems.map((item) => (
                       <Link
                         key={item.name}
-                        href={`/${sport.name.toLowerCase()}${item.href}`}
+                        href={`/${sport.slug}${item.href}`}
                         className={cn(
                           "flex h-8 items-center rounded-md px-3 text-sm transition-colors hover:bg-accent hover:text-accent-foreground",
-                          pathname ===
-                            `/${sport.name.toLowerCase()}${item.href}`
+                          pathname === `/${sport.slug}${item.href}`
                             ? "bg-accent text-accent-foreground"
                             : "text-muted-foreground",
                         )}
@@ -140,8 +124,9 @@ export function Sidebar() {
                     ))}
                   </div>
                 )}
-            </div>
-          ))}
+              </div>
+            ))
+          )}
         </nav>
       </ScrollArea>
     </aside>
