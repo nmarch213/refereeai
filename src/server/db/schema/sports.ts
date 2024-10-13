@@ -32,6 +32,7 @@ export const sports = createTable("sport", {
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
   name: varchar("name", { length: 255 }).notNull(),
+  slug: varchar("slug", { length: 255 }).notNull(),
   governingBodyId: varchar("governing_body_id", { length: 255 })
     .notNull()
     .references(() => governingBodies.id),
