@@ -29,12 +29,7 @@ export default async function RootLayout({
             <Header />
             <div className="flex flex-1">
               {session && <Sidebar />}
-              <main className="flex-1 overflow-y-auto">
-                <div className="container mx-auto py-6">
-                  {/* SportHeader will be rendered in specific sport pages */}
-                  {children}
-                </div>
-              </main>
+              <main className="flex-1 overflow-y-auto">{children}</main>
             </div>
             <Footer />
           </div>
