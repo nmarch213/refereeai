@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { HelpCircle, Book, MoreHorizontal } from "lucide-react";
+import { HelpCircle, Book, MoreHorizontal, Clock } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import {
   Card,
@@ -9,62 +11,65 @@ import {
   CardTitle,
   CardFooter,
 } from "~/components/ui/card";
-
-const sports = [
-  {
-    name: "Volleyball",
-    image:
-      "https://images.pexels.com/photos/17397548/pexels-photo-17397548/free-photo-of-women-playing-volleyball.jpeg",
-    slug: "volleyball",
-  },
-  {
-    name: "Basketball",
-    image: "https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg",
-    slug: "basketball",
-  },
-];
+import { api } from "~/trpc/react";
 
 export default function SportsCards() {
+  const { data: sports, isLoading } = api.sports.getAllSports.useQuery();
+
+  if (isLoading) {
+    return <div>Loading sports...</div>;
+  }
+
+  const availableSports = sports?.filter((sport) => sport.imgUrl) ?? [];
+  const comingSoonSports = sports?.filter((sport) => !sport.imgUrl) ?? [];
+
   return (
     <div className="container mx-auto py-8">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {sports.map((sport) => (
-          <Card key={sport.name} className="overflow-hidden">
+      <h2 className="mb-4 text-2xl font-bold">Available Sports</h2>
+      <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {availableSports.map((sport) => (
+          <Card key={sport.id} className="overflow-hidden">
             <CardHeader className="p-0">
               <Image
-                priority
-                src={sport.image}
+                src={sport.imgUrl!}
                 alt={sport.name}
-                height={200}
-                width={400}
+                height={100}
+                width={200}
+                className="h-32 w-full object-cover"
               />
             </CardHeader>
-            <CardContent className="p-4">
-              <CardTitle className="text-xl">{sport.name}</CardTitle>
+            <CardContent className="p-2">
+              <CardTitle className="text-lg">{sport.name}</CardTitle>
             </CardContent>
-            <CardFooter className="flex justify-between bg-secondary p-4">
+            <CardFooter className="flex justify-center p-2">
               <Link href={`/${sport.slug}/question`} passHref>
-                <Button variant="ghost" size="sm" asChild>
-                  <span>
-                    <HelpCircle className="mr-2 h-4 w-4" />
-                    Ask Question
-                  </span>
+                <Button variant="secondary" size="sm">
+                  Explore
                 </Button>
               </Link>
-              <Link href={`/${sport.slug}/chat`} passHref>
-                <Button variant="ghost" size="sm">
-                  <Book className="mr-2 h-4 w-4" />
-                  Chat with Rules
-                </Button>
-              </Link>
-              <Button variant="ghost" size="sm">
-                <MoreHorizontal className="mr-2 h-4 w-4" />
-                View Rules
-              </Button>
             </CardFooter>
           </Card>
         ))}
       </div>
+
+      {comingSoonSports.length > 0 && (
+        <>
+          <h2 className="mb-4 text-2xl font-bold">Coming Soon</h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            {comingSoonSports.map((sport) => (
+              <Card key={sport.id} className="overflow-hidden">
+                <CardHeader className="flex h-24 items-center justify-center bg-secondary p-2">
+                  <Clock className="h-8 w-8 text-muted-foreground" />
+                </CardHeader>
+                <CardContent className="p-2">
+                  <CardTitle className="text-sm">{sport.name}</CardTitle>
+                  <p className="text-xs text-muted-foreground">Coming Soon</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
