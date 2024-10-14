@@ -56,12 +56,12 @@ const splitRulebook = async (): Promise<RuleChunk[]> => {
   return chunks;
 };
 
-async function createRulebookChunks(sport: string) {
+async function createRulebookChunks(sport: string, year: string) {
   const chunks = await splitRulebook();
   const results = [];
-  const outputPath = "./chunks.json";
+  const outputPath = `src/assets/books/${sport}/${year}/rulebook-chunks.json`;
 
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < chunks.length; i++) {
     const chunk = chunks[i];
     if (!chunk) {
       console.warn(`Skipping undefined chunk at index ${i}`);
@@ -130,7 +130,7 @@ const RulebookProposition = z.object({
 });
 
 async function main() {
-  createRulebookChunks("basketball")
+  createRulebookChunks("basketball", "2024-25")
     .then(() => {
       process.exit(0);
     })

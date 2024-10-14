@@ -1,13 +1,7 @@
 import { sql, relations } from "drizzle-orm";
 import { pgTableCreator, pgEnum } from "drizzle-orm/pg-core";
-import {
-  varchar,
-  timestamp,
-  integer,
-  vector,
-  index,
-  text,
-} from "drizzle-orm/pg-core";
+import { varchar, timestamp } from "drizzle-orm/pg-core";
+import { rulebooks } from "./rules";
 
 const createTable = pgTableCreator((name) => `ref_${name}`);
 
@@ -51,40 +45,6 @@ export const sports = createTable("sport", {
     () => new Date(),
   ),
 });
-
-export const rulebooks = createTable(
-  "rulebook",
-  {
-    id: varchar("id", { length: 255 })
-      .notNull()
-      .primaryKey()
-      .$defaultFn(() => crypto.randomUUID()),
-    sportId: varchar("sport_id", { length: 255 })
-      .notNull()
-      .references(() => sports.id),
-    year: integer("year").notNull(),
-    type: rulebookTypeEnum("rulebook_type").notNull(),
-    content: text("content").notNull(),
-    embedding: vector("embedding", { dimensions: 1536 }).notNull(),
-    createdAt: timestamp("created_at", { withTimezone: true })
-      .default(sql`CURRENT_TIMESTAMP`)
-      .notNull(),
-    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
-      () => new Date(),
-    ),
-  },
-  (table) => ({
-    sportYearTypeIdx: index("sport_year_type_idx").on(
-      table.sportId,
-      table.year,
-      table.type,
-    ),
-    embeddingIdx: index().using(
-      "hnsw",
-      table.embedding.op("vector_cosine_ops"),
-    ),
-  }),
-);
 
 export const sportsRelations = relations(sports, ({ one, many }) => ({
   governingBody: one(governingBodies, {
