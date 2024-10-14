@@ -1,5 +1,5 @@
 import { sql, relations } from "drizzle-orm";
-import { pgTableCreator } from "drizzle-orm/pg-core";
+import { pgTableCreator, pgEnum } from "drizzle-orm/pg-core";
 import {
   varchar,
   timestamp,
@@ -10,6 +10,13 @@ import {
 } from "drizzle-orm/pg-core";
 
 const createTable = pgTableCreator((name) => `ref_${name}`);
+
+export const rulebookTypeEnum = pgEnum("ref_rulebook_type", [
+  "RULES",
+  "BOOK",
+  "MECHANICS",
+  "CASEPLAY",
+]);
 
 export const governingBodies = createTable("governing_body", {
   id: varchar("id", { length: 255 })
@@ -56,7 +63,7 @@ export const rulebooks = createTable(
       .notNull()
       .references(() => sports.id),
     year: integer("year").notNull(),
-    type: varchar("type", { length: 50 }).notNull(),
+    type: rulebookTypeEnum("type").notNull(),
     content: text("content").notNull(),
     embedding: vector("embedding", { dimensions: 1536 }).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
@@ -100,3 +107,6 @@ export const governingBodiesRelations = relations(
     sports: many(sports),
   }),
 );
+
+// Export the enum values for use in other files
+export const RULEBOOK_TYPES = rulebookTypeEnum.enumValues;
