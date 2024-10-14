@@ -11,7 +11,7 @@ import {
 
 const createTable = pgTableCreator((name) => `ref_${name}`);
 
-export const rulebookTypeEnum = pgEnum("ref_rulebook_type", [
+export const rulebookTypeEnum = pgEnum("rulebook_type", [
   "RULES",
   "BOOK",
   "MECHANICS",
@@ -63,7 +63,7 @@ export const rulebooks = createTable(
       .notNull()
       .references(() => sports.id),
     year: integer("year").notNull(),
-    type: rulebookTypeEnum("type").notNull(),
+    type: rulebookTypeEnum("rulebook_type").notNull(),
     content: text("content").notNull(),
     embedding: vector("embedding", { dimensions: 1536 }).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
