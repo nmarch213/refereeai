@@ -2,94 +2,95 @@ import { z } from "zod";
 import { generateObject } from "ai";
 import { propositionSystemPrompt } from "./proposal-indexing.prompts";
 import fs from "fs";
-import readline from "readline";
 import { config } from "dotenv";
 import { openai } from "~/server/utils/openai";
+import path from "path";
+
+// npx tsx -r dotenv/config --env-file=.env.local src/server/db/seed/embedding/rulebook/create-rulebook-chunks.ts
 
 config();
 
-const splitRulebook = async (): Promise<string[]> => {
-  const file = "src/app/assets/books/basketball/2023-24/index.mdx";
-  const chunks: string[] = [];
-  let currentChunk = "";
-  let lineCount = 0;
-  let chunkCount = 0;
+interface RuleChunk {
+  ruleNumber: number;
+  content: string;
+}
 
-  console.log(`Starting to process file: ${file}`);
+const splitRulebook = async (): Promise<RuleChunk[]> => {
+  const rulesDir = "src/assets/books/basketball/2024-25/rules";
+  const chunks: RuleChunk[] = [];
 
-  const fileStream = fs.createReadStream(file);
-  const rl = readline.createInterface({
-    input: fileStream,
-    crlfDelay: Infinity,
-  });
+  console.log(`Starting to process files in: ${rulesDir}`);
 
-  for await (const line of rl) {
-    lineCount++;
-    const trimmedLine = line.trim();
-    if (trimmedLine === "") {
-      if (currentChunk !== "") {
-        chunks.push(currentChunk.trim());
-        chunkCount++;
-        console.log(
-          `Chunk ${chunkCount} created with ${currentChunk.split(" ").length} words`,
+  const files = fs.readdirSync(rulesDir);
+
+  for (const file of files) {
+    if (file.endsWith(".txt")) {
+      const filePath = path.join(rulesDir, file);
+      const ruleNumber = parseInt(path.parse(file).name, 10);
+
+      if (isNaN(ruleNumber)) {
+        console.warn(
+          `Skipping file ${file} as it doesn't have a valid rule number.`,
         );
-        currentChunk = "";
+        continue;
       }
-    } else {
-      currentChunk += trimmedLine + " ";
-    }
 
-    if (lineCount % 100 === 0) {
-      console.log(`Processed ${lineCount} lines`);
+      console.log(`Processing file: ${file}`);
+
+      const content = fs.readFileSync(filePath, "utf-8");
+
+      chunks.push({
+        ruleNumber,
+        content: content.trim(),
+      });
+
+      console.log(`Processed Rule ${ruleNumber}`);
     }
   }
 
-  if (currentChunk !== "") {
-    chunks.push(currentChunk.trim());
-    chunkCount++;
-    console.log(
-      `Final chunk ${chunkCount} created with ${currentChunk.split(" ").length} words`,
-    );
-  }
+  console.log(`Finished processing. Total rules: ${chunks.length}`);
 
-  console.log(
-    `Finished processing. Total lines: ${lineCount}, Total chunks: ${chunkCount}`,
-  );
+  // Sort chunks by rule number
+  chunks.sort((a, b) => a.ruleNumber - b.ruleNumber);
 
   return chunks;
 };
 
-async function createRulebookChunks(sport: string, year: string) {
+async function createRulebookChunks(sport: string) {
   const chunks = await splitRulebook();
-  const limitedChunks = chunks.slice(4, 8);
   const results = [];
   const outputPath = "./chunks.json";
-  let lastRuleReference: {
-    rule?: string;
-    section?: string;
-    article?: string;
-  } = {};
 
-  for (let i = 0; i < limitedChunks.length; i++) {
-    const chunk = limitedChunks[i];
-    console.log(`Processing chunk ${i + 1} of ${limitedChunks.length}`);
+  for (let i = 0; i < 1; i++) {
+    const chunk = chunks[i];
+    if (!chunk) {
+      console.warn(`Skipping undefined chunk at index ${i}`);
+      continue;
+    }
+    const { ruleNumber, content } = chunk;
+    if (ruleNumber === undefined || content === undefined) {
+      console.warn(
+        `Skipping invalid chunk at index ${i}: missing ruleNumber or content`,
+      );
+      continue;
+    }
+    console.log(`Processing Rule ${ruleNumber} (${i + 1} of ${chunks.length})`);
 
     const response = await generateObject({
       model: openai.chat("gpt-4o-mini"),
+      temperature: 0,
       schema: RulebookProposition,
       system: propositionSystemPrompt(sport),
-      prompt: `Decompose the following Rulebook Content: 
+      prompt: `Decompose the following Rulebook Content for Rule ${ruleNumber}: 
 			<Content>
-			${chunk}
-			</Content>
-			
-      <LastRuleReference>
-      ${lastRuleReference ? JSON.stringify(lastRuleReference) : "None"}
-      </LastRuleReference>`,
+			${content}
+			</Content>`,
     });
 
-    results.push(response.object.sentences);
-    lastRuleReference = response.object.sentences.at(-1)?.ruleReference ?? {};
+    results.push({
+      ruleNumber,
+      sentences: response.object.sentences,
+    });
 
     // Write results to chunks.json after each chunk is processed
     try {
@@ -103,35 +104,33 @@ async function createRulebookChunks(sport: string, year: string) {
     }
   }
 
-  console.log(`All chunks processed. Final results saved in ${outputPath}`);
+  console.log(`All rules processed. Final results saved in ${outputPath}`);
   return results;
 }
 
+// Update the RulebookProposition schema to include the ruleNumber
 const RulebookProposition = z.object({
+  ruleNumber: z.number().describe("The rule number"),
   sentences: z.array(
     z.object({
       text: z.string().describe("The proposition text of the rulebook content"),
-      ruleReference: z
-        .object({
-          rule: z.string().describe("The rule number (e.g. Rule 2)").optional(),
-          section: z
-            .string()
-            .describe("The section number (e.g. 2.3 Rule 2 Section 3)")
-            .optional(),
-          article: z
-            .string()
-            .describe(
-              "The article number (e.g. 2.3.4 Rule 2 Section 3 Article 4)",
-            )
-            .optional(),
-        })
-        .optional(),
+      ruleReference: z.object({
+        rule: z.number().describe("The rule number (e.g. 2)"),
+        section: z
+          .number()
+          .describe("The section number (e.g. 2.3 Rule 2 Section 3)"),
+        article: z
+          .number()
+          .describe(
+            "The article number (e.g. 2.3.4 Rule 2 Section 3 Article 4)",
+          ),
+      }),
     }),
   ),
 });
 
 async function main() {
-  createRulebookChunks("basketball", "2023-24")
+  createRulebookChunks("basketball")
     .then(() => {
       process.exit(0);
     })

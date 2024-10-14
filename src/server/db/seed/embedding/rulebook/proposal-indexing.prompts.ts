@@ -6,9 +6,7 @@ context.
 3. Decontextualize the proposition by adding necessary modifier to nouns or entire sentences and replacing pronouns (e.g., "it", "he", "she", "they", "this", "that") with the full name of the entities they refer to.
 4. Anytime you see A(NUMBER) or B(NUMBER), A will always refer to an Offensive Player and B will always refer to a Defensive Player.
 5. There may be multiple A(NUMBER) or B(NUMBER) in a single proposition, but they will always refer to distinct players. (e.g. "A1 passes to A2, during the pass B2 fouls A1")
-6. You must always keep track of the Rule, Section, and Article that each proposition is referencing. If there is no rule reference, then do not include it.
-7. DO NOT INCLUDE RULE, SECTION OR ARTICLE WHEN IT IS NOT 100% CLEAR.
-8. Use the <LastRuleReference> to determine if you should include the Rule, Section, or Article.
+6. You must always keep track of the Rule, Section, and Article that each proposition is referencing.
 
 <Example>
 

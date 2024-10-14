@@ -1,770 +1,1348 @@
 [
-  [
-    {
-      "text": "Either type of backboard may be transparent.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "Either type of backboard may be nontransparent.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No logo is permitted on the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No marking is permitted on the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No lettering is permitted on the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No logo is permitted on the backboard padding.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No marking is permitted on the backboard padding.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No lettering is permitted on the backboard padding.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No logo is permitted on the basket.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No marking is permitted on the basket.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "No lettering is permitted on the basket.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "4"
-      }
-    },
-    {
-      "text": "Each backboard shall be midway between the sidelines.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The plane of the front face of each backboard shall be perpendicular to the floor.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The plane of the front face of each backboard shall be parallel to the end line.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "1"
-      }
-    },
-    {
-      "text": "Each backboard shall be 4 feet from the end line.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The upper edge of the rectangular backboard shall be 13 feet above the floor.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The upper edge of the fan-shaped backboard shall be 12 feet 8 inches above the floor.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The backboard shall be protected from spectators to a distance of at least 3 feet at each end.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "8",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The bottom of all rectangular backboards shall be padded with a poly high-carb vinyl-type material.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The poly high-carb vinyl-type material must meet the Bashor resilience test with a range of 20-30.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding shall cover the bottom surface of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding shall cover the side surface of the backboard to a distance of 15 inches up from the bottom.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The front surface of the backboard shall be covered to a minimum distance of ¾ inch from the bottom of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The back surface of the backboard shall be covered to a minimum distance of ¾ inch from the bottom of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding shall be 1 inch thick from the front surface of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding shall be 1 inch thick from the back surface of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding material shall be 2 inches from the bottom edge of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding is recommended to be mounted on the backboard by adhesive or material such as Velcro or channel.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding shall be a single, solid color.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The padding shall be the same color on both backboards.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "9",
-        "article": "1"
-      }
-    }
-  ],
-  [
-    {
-      "text": "Any backboard support behind the backboard shall be padded on the bottom surface to a distance of 2 feet from the face of the backboard if the height is less than 9 feet above the floor.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "2"
-      }
-    },
-    {
-      "text": "All portable backstops shall have the bases padded to a height of 7 feet on the court-side surface.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "2"
-      }
-    },
-    {
-      "text": "All support systems should be at least 8 feet behind the plane of the backboard face and at a height of 7 feet or more above the floor.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "3"
-      }
-    },
-    {
-      "text": "Any backboard support that is not directly behind the backboard should be at least 6 inches behind it if the support extends above the top.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "4"
-      }
-    },
-    {
-      "text": "Any backboard support that is not directly behind the backboard should be at least 2 feet behind it if the support extends beyond the side.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "4"
-      }
-    },
-    {
-      "text": "Any overhead backboard support structure that is forward-braced due to space limitations shall meet specific requirements.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "4"
-      }
-    },
-    {
-      "text": "A front, diagonal-brace system shall be located above a line extending upward and into the playing court at a maximum 45-degree angle from a point on a vertical line located a minimum of 6 inches behind the front side of the backboard at a minimum height of 4 feet 6 inches above the basket ring.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "4"
-      }
-    },
-    {
-      "text": "Manufacturers and administrators should be aware of an 'extreme-caution' warning relative to the misuse of portable backstops.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "5"
-      }
-    },
-    {
-      "text": "A high degree of injury potential and a severe liability problem exists when players or spectators are allowed to hang, sit or stand on the basket ring or backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "5"
-      }
-    },
-    {
-      "text": "Administrators shall see that the practice of hanging, sitting, or standing on the basket ring or backboard is eliminated or that the portable units are lowered at the completion of the game.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "5"
-      }
-    },
-    {
-      "text": "There is a high risk of severe injury, even death, if the practice of hanging, sitting, or standing on the basket ring or backboard is allowed to occur.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "5"
-      }
-    },
-    {
-      "text": "A recommended warning or inscription such as 'Danger – please do not get on the ring/backboard' is desirable.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "5"
-      }
-    },
-    {
-      "text": "Each basket shall consist of a single metal ring with an inside diameter of 18 inches, its flange and braces, and a white-cord 12-mesh net that is 15 to 18 inches in length, suspended from beneath the ring.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "1"
-      }
-    },
-    {
-      "text": "Each ring shall not be more than 5/8 inch in diameter, with the possible addition of small-gauge loops on the bottom edge for attaching a 12-mesh net.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The ring and its attaching flange and braces shall be bright orange in color.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The cord of the net shall be not less than 120-thread nor more than 144-thread twine, or plastic material of comparable dimensions with no additional extensions.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "3"
-      }
-    },
-    {
-      "text": "The cord of the net shall be constructed to momentarily check the ball as it passes through.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "10",
-        "article": "3"
-      }
-    },
-    {
-      "text": "Each basket ring shall be securely attached to the backboard/support system with a ring-restraining device.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The ring-restraining device shall ensure that the basket stays attached in the event a glass backboard breaks.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "1"
-      }
-    }
-  ],
-  [
-    {
-      "text": "The upper edge of the basketball rim shall be 10 feet above and parallel to the floor.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The upper edge of the basketball rim shall be equidistant from the vertical edges of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The nearest point of the inside edge of the basketball rim shall be 6 inches from the plane of the face of the backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "1"
-      }
-    },
-    {
-      "text": "Positive-lock breakaway rings are legal.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "2"
-      }
-    },
-    {
-      "text": "Flex breakaway rings are legal.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "2"
-      }
-    },
-    {
-      "text": "Fixed rings are legal.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "2"
-      }
-    },
-    {
-      "text": "Breakaway basket rings shall have rebound characteristics similar to those of fixed rings.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The pressure-release mechanism of breakaway basket rings should ensure rebound characteristics and protect both the ring and backboard.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The design of the basketball ring and its construction should ensure player safety.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "2"
-      }
-    },
-    {
-      "text": "For basketball rings with a breakaway mechanism, the pressure-release mechanism shall be preset so that the rings do not deflect more than ½ inch when subjected to a static load of 50 pounds.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "3"
-      }
-    },
-    {
-      "text": "The pressure-release mechanism of basketball rings may be sealed or field adjustable.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "3"
-      }
-    },
-    {
-      "text": "When released, the positive-lock breakaway ring shall not rotate more than 30 degrees below the original horizontal position.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "3"
-      }
-    },
-    {
-      "text": "After release and with the load no longer applied, the basketball ring shall return automatically and instantaneously to the original position.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "3"
-      }
-    },
-    {
-      "text": "It is recommended that schools have the basketball rings tested for rules compliance.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "11",
-        "article": "3"
-      }
-    },
-    {
-      "text": "The basketball shall meet the following specifications:",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The solid color of the basketball shall be Pantone Matching System (PMS) Orange 151, Red-Orange 173, or Brown 1535.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The basketball shall be spherical.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The basketball shall have a deeply-pebbled, granulated surface with horizontally shaped panels bonded tightly to the rubber carcass.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The circumference of the basketball shall be within a minimum of 29½ inches to a maximum of 30 inches for high school boys competition.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The circumference of the basketball shall be within a minimum of 28½ inches to a maximum of 29 inches for high school girls competition.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The weight of the basketball shall be within a minimum of 20 ounces to a maximum of 22 ounces for high school boys competition.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The weight of the basketball shall be within a minimum of 18 ounces to a maximum of 20 ounces for high school girls competition.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The black rubber rib separating the panels of the basketball shall not exceed ¼ inch in width.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The basketball shall include the NFHS Authenticating Mark.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The NFHS Authenticating Mark can be displayed in either format shown in Diagram 3.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    },
-    {
-      "text": "A current list of NFHS authenticated products can be found on the website, nfhs.org, under \"Resources.\"",
-      "ruleReference": {
-        "rule": "1",
-        "section": "12",
-        "article": "1"
-      }
-    }
-  ],
-  [
-    {
-      "text": "The ball shall be inflated to an air pressure such that when the ball is dropped to the playing surface from a height of 6 feet, measured to the bottom of the ball, the ball shall rebound to a height, measured to the top of the ball, of not less than 49 inches when the ball strikes on its least resilient spot.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The ball shall rebound to a height, measured to the top of the ball, of not more than 54 inches when the ball strikes on its most resilient spot.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "To be legal, the air pressure which will give the required reaction shall be stamped on the ball.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The pressure for game use shall make the ball bounce legally.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The home team shall provide a ball which meets the specifications.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "3"
-      }
-    },
-    {
-      "text": "The referee shall be the sole judge of the legality of the ball.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "3"
-      }
-    },
-    {
-      "text": "The referee may select a ball provided by the visiting team.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "3"
-      }
-    },
-    {
-      "text": "The location of each team's bench shall be designated by game management.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "1"
-      }
-    },
-    {
-      "text": "It is recommended that the benches for team members and coaches of both teams be placed along that side of the court on which the scorer's and timer's table is located.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "1"
-      }
-    },
-    {
-      "text": "The coaching box shall be outlined outside the side of the court on which the scorer's and timer's table and team benches are located.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The area of the coaching box shall be bounded by a line drawn 28 feet from the end line towards the division line.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "A line, perpendicular to the 28-foot line and placed at each end, with a minimum length of 2 feet, shall be extended toward the team bench so that the coaching box boundary is evident.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "These lines shall be located off the court and be 2 inches wide.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The same directions should be followed for the other side of the scorer's and timer's table.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "2"
-      }
-    },
-    {
-      "text": "The time-out area shall be the area inside an imaginary rectangle formed by the boundaries of the sideline (including the bench), end line, and an imaginary line extended from the free-throw lane line nearest the bench area meeting an imaginary line extended from the coaching-box line.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "13",
-        "article": "3"
-      }
-    },
-    {
-      "text": "A red light behind each backboard or an LED light on each backboard is permitted to signal that time has expired for a quarter or extra period.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "14",
-        "article": "1"
-      }
-    },
-    {
-      "text": "In facilities without a red light behind or an LED light on each backboard, the audible timer's signal shall indicate that time has expired.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "14",
-        "article": "1"
-      }
-    },
-    {
-      "text": "A visible game clock and scoreboard are mandatory.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "15",
-        "article": "1"
-      }
-    },
-    {
-      "text": "An alternate timing device and scoring information system shall be available in the event of malfunction.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "15",
-        "article": "1"
-      }
-    },
-    {
-      "text": "A visible display shall be located at the scorer's and timer's table to indicate team possession for the alternating-possession procedure.",
-      "ruleReference": {
-        "rule": "1",
-        "section": "16",
-        "article": "1"
-      }
-    }
-  ]
+  {
+    "ruleNumber": 1,
+    "sentences": [
+      {
+        "text": "The NFHS does not perform scientific tests on any specific items of equipment to determine if the equipment poses undue risks to student-athletes, coaches, officials or spectators."
+      },
+      {
+        "text": "The responsibility for determining if the equipment poses undue risks lies with equipment manufacturers."
+      },
+      {
+        "text": "The playing court shall be a rectangular surface free from obstructions."
+      },
+      {
+        "text": "The dimensions of the playing court shall not be greater than 94 feet in length by 50 feet in width."
+      },
+      {
+        "text": "The ideal measurements for the playing court for high school age are 84 feet in length by 50 feet in width."
+      },
+      {
+        "text": "Suggestions about construction and lighting are in Diagram 1."
+      },
+      {
+        "text": "The playing court shall be marked with sidelines, end lines and other lines as shown in Diagram 1."
+      },
+      {
+        "text": "There shall be at least 3 feet of unobstructed space outside boundaries."
+      },
+      {
+        "text": "It is preferable to have 10 feet of unobstructed space outside boundaries."
+      },
+      {
+        "text": "The sidelines and end lines shall be a minimum of 2 inches in width."
+      },
+      {
+        "text": "If it is desirable to use contrasting colored-floor areas instead of the lines, see Table 1, No. 3."
+      },
+      {
+        "text": "If, on an unofficial court, there is less than 3 feet of unobstructed space outside any sideline or end line, a narrow broken line shall be marked on the court."
+      },
+      {
+        "text": "The narrow broken line shall be marked parallel with and 3 feet inside that boundary."
+      },
+      {
+        "text": "The restraining line becomes the boundary line during a throw-in on that side or end."
+      },
+      {
+        "text": "The restraining line continues to be the boundary until the ball crosses the line."
+      },
+      {
+        "text": "A restraining circle shall be drawn at the center of the court."
+      },
+      {
+        "text": "The radius of the restraining circle shall be 6 feet measured to the outside edge."
+      },
+      {
+        "text": "The edge of the circle shall be designated with a minimum of a ¼-inch-wide single line but no wider than 2 inches."
+      },
+      {
+        "text": "Spaces for nonjumpers around the center circle are 36 inches deep."
+      },
+      {
+        "text": "A division line 2 inches wide shall divide the court into two equal parts."
+      },
+      {
+        "text": "If the court is less than 74 feet long, it should be divided by two lines."
+      },
+      {
+        "text": "Each of the two lines should be parallel to and 40 feet from the farther end line."
+      },
+      {
+        "text": "Shadow-bordered lines are permissible."
+      },
+      {
+        "text": "A shadow line is a line that designates the required width by use of border or outline lines at least ¼-inch wide."
+      },
+      {
+        "text": "Border lines that are the natural color of the court are permissible."
+      },
+      {
+        "text": "The area within these lines need not be one color, but the continuous outline shall be clearly visible to the officials."
+      },
+      {
+        "text": "If the floor has a logo in the center of the court, that logo should not distract from the visibility of the division line or center circle."
+      },
+      {
+        "text": "A three-point line, 2 inches wide in the form of a semicircle, shall be drawn at each end of the court."
+      },
+      {
+        "text": "The semicircle has a radius of 19 feet 9 inches from a point in the middle of the free-throw lane directly below the center of the basket to the outside edge of the line."
+      },
+      {
+        "text": "The semicircle shall be extended with a 2-inch wide line perpendicular to the end line."
+      },
+      {
+        "text": "The length of the perpendicular line shall be 63 inches from the inside edge of the end line."
+      },
+      {
+        "text": "The three-point line shall be the same color as the free-throw lane boundary lines and free-throw semicircle."
+      },
+      {
+        "text": "A free-throw lane, 12 feet wide measured to the outside of each lane boundary, shall be marked at each end of the court."
+      },
+      {
+        "text": "The dimensions and markings of the free-throw lane are shown in Diagram 1."
+      },
+      {
+        "text": "All lines designating the free-throw lane, but not lane-space marks, are part of the lane."
+      },
+      {
+        "text": "The lane-space marks identify areas which extend 36 inches from the outer edge of the lane lines toward the sidelines."
+      },
+      {
+        "text": "There are three lane spaces on each lane boundary line."
+      },
+      {
+        "text": "The free-throw lane line and semicircle shall be the same color as the three-point line."
+      },
+      {
+        "text": "A free-throw line, 2 inches wide, shall be drawn across both semicircles."
+      },
+      {
+        "text": "The semicircles have an outside radius of 6 feet."
+      },
+      {
+        "text": "The free-throw line shall be parallel to the end line."
+      },
+      {
+        "text": "The farthest edge of the free-throw line shall be 15 feet from the plane of the face of the backboard."
+      },
+      {
+        "text": "The backboards shall be the same size at both ends of the court."
+      },
+      {
+        "text": "The backboard shall be one of three types: (1) a rectangle 6 feet horizontally and 4 feet vertically; (2) a rectangle 6 feet horizontally and 3½ feet vertically; (3) a fan-shaped backboard, 54 inches wide."
+      },
+      {
+        "text": "The 6-foot horizontal and 3½-foot vertical dimensions are recommended for replacement backboards or new installations."
+      },
+      {
+        "text": "Each of the backboards shall be of any rigid material."
+      },
+      {
+        "text": "The front surface of the backboard shall be flat."
+      },
+      {
+        "text": "If the backboard is not transparent, it shall be white."
+      },
+      {
+        "text": "Tinted glass backboards are prohibited."
+      },
+      {
+        "text": "It is not legal to paint a fan-shaped board on a rectangular backboard."
+      },
+      {
+        "text": "For the fan-shaped backboard in transparent material, the recurved cut-out at the bottom may be filled in."
+      },
+      {
+        "text": "The ring may be attached to the front of the backboard."
+      },
+      {
+        "text": "If the backboard is transparent, it shall be marked with a rectangle centered behind the ring."
+      },
+      {
+        "text": "The rectangle shall be marked by a 2-inch white line."
+      },
+      {
+        "text": "The rectangle shall have outside dimensions of 24 inches horizontally and 18 inches vertically."
+      },
+      {
+        "text": "For the rectangular backboard, the top edge of the backboard shall be level with the ring."
+      },
+      {
+        "text": "For the fan-shaped backboard, the baseline shall be omitted."
+      },
+      {
+        "text": "The two vertical lines shall be extended to the bottom of the backboard."
+      },
+      {
+        "text": "The rectangular target in a bright orange or black color may be used on a nontransparent backboard."
+      },
+      {
+        "text": "The border of the backboard shall be marked with a white line."
+      },
+      {
+        "text": "The border shall be 3 inches or less in width."
+      },
+      {
+        "text": "Either type backboard may be transparent or nontransparent."
+      },
+      {
+        "text": "No logo, marking, lettering, etc., is permitted on the backboard, backboard padding, or basket."
+      },
+      {
+        "text": "Each backboard shall be midway between the sidelines."
+      },
+      {
+        "text": "The plane of the front face of each backboard shall be perpendicular to the floor."
+      },
+      {
+        "text": "The front face of each backboard shall be parallel to the end line."
+      },
+      {
+        "text": "Each backboard shall be 4 feet from the end line."
+      },
+      {
+        "text": "The upper edge of the backboard shall be 13 feet above the floor for the rectangular backboard."
+      },
+      {
+        "text": "The upper edge of the backboard shall be 12 feet 8 inches above the floor for the fan-shaped backboard."
+      },
+      {
+        "text": "The backboard shall be protected from spectators to a distance of at least 3 feet at each end."
+      },
+      {
+        "text": "The bottom and each side of all rectangular backboards shall be padded with a poly high-carb vinyl-type material."
+      },
+      {
+        "text": "The padding shall meet the Bashor resilience test with a range of 20-30."
+      },
+      {
+        "text": "The padding shall cover the bottom surface of the board and the side surface to a distance of 15 inches up from the bottom."
+      },
+      {
+        "text": "The front and back surfaces of the backboard shall be covered to a minimum distance of ¾ inch from the bottom of the backboard."
+      },
+      {
+        "text": "The padding shall be 1 inch thick from the front and back surfaces of the backboard."
+      },
+      {
+        "text": "The material shall be 2 inches from the bottom edge of the backboard."
+      },
+      {
+        "text": "It is recommended that the padding be mounted on the backboard by adhesive or material such as Velcro, channel, etc."
+      },
+      {
+        "text": "The padding shall be a single, solid color."
+      },
+      {
+        "text": "The padding shall be the same color on both backboards."
+      },
+      {
+        "text": "Any backboard support behind the backboard and at a height of less than 9 feet above the floor shall be padded on the bottom surface."
+      },
+      {
+        "text": "The padding shall extend to a distance of 2 feet from the face of the backboard."
+      },
+      {
+        "text": "All portable backstops shall have the bases padded to a height of 7 feet on the court-side surface."
+      },
+      {
+        "text": "All support systems should be at least 8 feet behind the plane of the backboard face."
+      },
+      {
+        "text": "All support systems should be at a height of 7 feet or more above the floor."
+      },
+      {
+        "text": "Any backboard support that is not directly behind the backboard should be at least 6 inches behind it."
+      },
+      {
+        "text": "If the support extends above the top, it should be at least 6 inches behind the backboard."
+      },
+      {
+        "text": "If the support extends beyond the side, it should be at least 2 feet behind the backboard."
+      },
+      {
+        "text": "Any overhead backboard support structure which shall be forward-braced due to space limitations shall meet specific requirements."
+      },
+      {
+        "text": "A front, diagonal-brace system shall be located above a line extending upward and into the playing court."
+      },
+      {
+        "text": "The angle of the front, diagonal-brace system shall be a maximum of 45 degrees."
+      },
+      {
+        "text": "The point on a vertical line for the front, diagonal-brace system shall be located a minimum of 6 inches behind the front side of the backboard."
+      },
+      {
+        "text": "The minimum height for the front, diagonal-brace system shall be 4 feet 6 inches above the basket ring."
+      },
+      {
+        "text": "Manufacturers and administrators should be aware of an 'extreme-caution' warning relative to the misuse of portable backstops."
+      },
+      {
+        "text": "A high degree of injury potential and a severe liability problem exists when players or spectators are allowed to hang, sit or stand on the basket ring or backboard."
+      },
+      {
+        "text": "Administrators shall see that this practice is eliminated or that the portable units are lowered at the completion of the game."
+      },
+      {
+        "text": "There is a high risk of severe injury, even death, if this practice is allowed to occur."
+      },
+      {
+        "text": "A recommended warning or inscription such as 'Danger – please do not get on the ring/backboard' is desirable."
+      },
+      {
+        "text": "Each basket shall consist of a single metal ring, 18 inches in inside diameter."
+      },
+      {
+        "text": "Each basket shall consist of its flange and braces."
+      },
+      {
+        "text": "Each basket shall consist of a white-cord 12-mesh net, 15 to 18 inches in length, suspended from beneath the ring."
+      },
+      {
+        "text": "Each ring shall not be more than 5/8 inch in diameter."
+      },
+      {
+        "text": "Small-gauge loops may be added on the bottom edge for attaching a 12-mesh net."
+      },
+      {
+        "text": "The ring and its attaching flange and braces shall be bright orange in color."
+      },
+      {
+        "text": "The cord of the net shall be not less than 120-thread nor more than 144-thread twine."
+      },
+      {
+        "text": "The cord of the net may be plastic material of comparable dimensions with no additional extensions."
+      },
+      {
+        "text": "The cord of the net shall be constructed to momentarily check the ball as it passes through."
+      },
+      {
+        "text": "Each basket ring shall be securely attached to the backboard/support system with a ring-restraining device."
+      },
+      {
+        "text": "The ring-restraining device shall ensure that the basket stays attached in the event a glass backboard breaks."
+      },
+      {
+        "text": "Each basket ring shall have its upper edge 10 feet above and parallel to the floor."
+      },
+      {
+        "text": "Each basket ring shall be equidistant from the vertical edges of the backboard."
+      },
+      {
+        "text": "The nearest point of the inside edge of the ring shall be 6 inches from the plane of the face of the backboard."
+      },
+      {
+        "text": "Positive-lock breakaway, flex breakaway and fixed rings are legal."
+      },
+      {
+        "text": "Breakaway basket rings shall have rebound characteristics similar to those of fixed rings."
+      },
+      {
+        "text": "The pressure-release mechanism should ensure these characteristics, as well as protect both the ring and backboard."
+      },
+      {
+        "text": "The design of the ring and its construction should ensure player safety."
+      },
+      {
+        "text": "For those rings with a breakaway mechanism, the pressure-release mechanism shall be preset."
+      },
+      {
+        "text": "The rings shall not deflect more than ½ inch when subjected to static load of 50 pounds."
+      },
+      {
+        "text": "The pressure-release mechanism may be sealed or field adjustable."
+      },
+      {
+        "text": "When released, the positive-lock breakaway ring shall not rotate more than 30 degrees below the original horizontal position."
+      },
+      {
+        "text": "After release and with the load no longer applied, the ring shall return automatically and instantaneously to the original position."
+      },
+      {
+        "text": "It is recommended that schools have the basket rings tested for rules compliance."
+      },
+      {
+        "text": "The ball shall meet specific specifications."
+      },
+      {
+        "text": "The solid color of the ball shall be Pantone Matching System (PMS) Orange 151, Red-Orange 173 or Brown 1535."
+      },
+      {
+        "text": "The ball shall be spherical."
+      },
+      {
+        "text": "The ball shall have a deeply-pebbled, granulated surface with horizontally shaped panels bonded tightly to the rubber carcass."
+      },
+      {
+        "text": "The circumference of the ball shall be within a minimum of 29½ inches to a maximum of 30 inches for high school boys competition."
+      },
+      {
+        "text": "The circumference of the ball shall be within a minimum of 28½ inches to a maximum of 29 inches for high school girls competition."
+      },
+      {
+        "text": "The weight of the ball shall be within a minimum of 20 ounces to a maximum of 22 ounces for high school boys competition."
+      },
+      {
+        "text": "The weight of the ball shall be within a minimum of 18 ounces to a maximum of 20 ounces for high school girls competition."
+      },
+      {
+        "text": "The black rubber rib separating the panels shall not exceed ¼ inch in width."
+      },
+      {
+        "text": "The ball shall include the NFHS Authenticating Mark."
+      },
+      {
+        "text": "The NFHS Authenticating Mark can be displayed in either format shown in Diagram 3."
+      },
+      {
+        "text": "The home team shall provide a ball which meets the specifications."
+      },
+      {
+        "text": "The referee shall be the sole judge of the legality of the ball."
+      },
+      {
+        "text": "The referee may select a ball provided by the visiting team."
+      },
+      {
+        "text": "The location of each team's bench shall be designated by game management."
+      },
+      {
+        "text": "It is recommended that the benches for team members and coaches of both teams be placed along that side of the court on which the scorer's and timer's table is located."
+      },
+      {
+        "text": "The coaching box shall be outlined outside the side of the court on which the scorer's and timer's table and team benches are located."
+      },
+      {
+        "text": "The coaching box area shall be bounded by a line drawn 28 feet from the end line towards the division line."
+      },
+      {
+        "text": "A line, perpendicular to the 28-foot line and placed at each end, shall be extended toward the team bench."
+      },
+      {
+        "text": "The minimum length of the lines shall be 2 feet."
+      },
+      {
+        "text": "The coaching box boundary shall be evident."
+      },
+      {
+        "text": "These lines shall be located off the court and be 2 inches wide."
+      },
+      {
+        "text": "The same directions should be followed for the other side of the scorer's and timer's table."
+      },
+      {
+        "text": "State associations may alter the length and placement of the 28-foot coaching box."
+      },
+      {
+        "text": "The time-out area shall be the area inside an imaginary rectangle formed by the boundaries of the sideline, end line, and an imaginary line extended from the free-throw lane line nearest the bench area."
+      },
+      {
+        "text": "The imaginary line shall meet an imaginary line extended from the coaching-box line."
+      },
+      {
+        "text": "A red light behind each backboard or an LED light on each backboard is permitted to signal that time has expired for a quarter or extra period."
+      },
+      {
+        "text": "In facilities without a red light behind or an LED light on each backboard, the audible timer's signal shall indicate that time has expired."
+      },
+      {
+        "text": "A visible game clock and scoreboard are mandatory."
+      },
+      {
+        "text": "An alternate timing device and scoring information system shall be available in the event of malfunction."
+      },
+      {
+        "text": "A visible display shall be located at the scorer's and timer's table to indicate team possession for the alternating-possession procedure."
+      },
+      {
+        "text": "An 'X' 12 inches long and 2 inches wide shall be placed on the floor out of bounds directly in front of the official scorer."
+      },
+      {
+        "text": "The 'X' shall help substitutes with the proper location."
+      },
+      {
+        "text": "The playing of music/sound effects shall only be permitted during pregame, time-outs, intermission and post-game."
+      },
+      {
+        "text": "The use of artificial noisemakers shall be prohibited."
+      },
+      {
+        "text": "The announcer shall be prohibited from making announcements during the game."
+      },
+      {
+        "text": "The use of electronic devices is permitted during the game."
+      },
+      {
+        "text": "Non-playing personnel, e.g., spirit participants, media, shall remain outside of the playing area during a 30-second time-out."
+      },
+      {
+        "text": "Non-playing personnel shall be located outside the free-throw lane lines extended toward the sidelines throughout the game."
+      }
+    ]
+  },
+  {
+    "ruleNumber": 2,
+    "sentences": [
+      {
+        "text": "The official's uniform shall be a black-and-white striped shirt.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The official's uniform shall be black pants.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The official's uniform shall be predominantly black shoes.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The official's uniform shall be black socks.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The game officials shall be a referee and an umpire or a referee and two umpires.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The game officials shall be assisted by an official timer and scorer.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The scorer and timer shall be located at the scorer's and timer's table on the side of the court.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "It is recommended that the official scorer and timer be seated next to each other.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "If using a shot clock, the operator shall be located at the scorer's and timer's table.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 1",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The officials shall make decisions for infractions of the rules committed within or outside the boundary lines.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The use of any replay or television monitoring equipment by the officials in making any decision relating to the game is prohibited.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "A state association may permit game or replay officials to use a replay monitor during state championship series contests.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The replay monitor may be used to determine if a scored goal at the expiration of time in the fourth quarter or any overtime period should be counted.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The replay monitor may be used to determine if a scored goal is a two-point or a three-point goal.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The officials' jurisdiction begins when the officials arrive on the floor.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The officials' arrival on the floor shall be at least 15 minutes before the scheduled starting time of the game.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The officials' jurisdiction extends through periods when the game may be momentarily stopped for any reason.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The jurisdiction of the officials is terminated when all officials leave the visual confines of the playing area.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The final score has been approved when all officials leave the visual confines of the playing area.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The officials retain clerical authority over the contest through the completion of any reports, including those imposing disqualifications.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "State associations may intercede in the event of unusual incidents that occur before, during or after the officials' jurisdiction has ended.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 2",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The referee shall make decisions on any points not specifically covered in the rules.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 3",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The referee shall inspect and approve all equipment, including court, baskets, ball, backboards, and scorer's and timer's signals.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The referee shall designate the official timepiece and official timer prior to the scheduled starting time of the game.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The referee shall designate the official scorebook and official scorer prior to the scheduled starting time of the game.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "A state association may authorize use of supplementary equipment to aid in game administration.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The referee shall be responsible for having each team notified three minutes before each half is to begin.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The referee shall verify with the head coach, prior to each contest, that all team members' uniforms and equipment are legal and will be worn properly.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The referee shall verify with the head coach, prior to each contest, that all participants will exhibit proper sporting behavior throughout the contest.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 4",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The referee shall designate the official to toss the ball in the center restraining circle for all jump-ball situations.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The referee shall administer the alternating-possession throw-in to start the second, third and fourth quarters.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The referee shall decide whether a goal shall count if the officials disagree.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The referee may declare the game a forfeit when conditions warrant.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The referee shall decide matters upon which the scorer and timer disagree and correct obvious timing errors.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The referee shall confer with the official scorer at halftime to determine the possession arrow is pointed in the proper direction to begin play in the third quarter.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 6"
+        }
+      },
+      {
+        "text": "The referee shall check and approve the score at the end of each half.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 7"
+        }
+      },
+      {
+        "text": "The referee shall inform each team and the table officials of the overtime procedures when the score is tied at the end of regulation time.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 5",
+          "article": "ART. 8"
+        }
+      },
+      {
+        "text": "No official has the authority to set aside or question decisions made by the other official(s) within the limits of their respective outlined duties.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 6",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The officials shall conduct the game in accordance with the rules.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The officials shall notify the captains when play is about to begin at the start of the game.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The officials shall put the ball in play.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The officials shall determine when the ball becomes dead and live.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The officials shall prohibit practice during a dead ball, except between halves.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The officials shall administer penalties.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The officials shall grant and charge time-out.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 6"
+        }
+      },
+      {
+        "text": "The officials shall beckon substitutes to enter the court.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 7"
+        }
+      },
+      {
+        "text": "The officials shall signal a three-point attempt and signal a successful three-point goal.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 8"
+        }
+      },
+      {
+        "text": "The officials shall silently and visibly count seconds to administer the throw-in, free-throw, backcourt and closely-guarded rules.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 9"
+        }
+      },
+      {
+        "text": "The officials shall report a team warning for delay to the official scorer and then to the head coach of the offending team.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 10"
+        }
+      },
+      {
+        "text": "The officials shall report a team warning for head coach/bench personnel misconduct to the official scorer and then to the head coach of the offending team.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 11"
+        }
+      },
+      {
+        "text": "The officials shall notify the head coach when a team is granted its final allowable time-out.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 7",
+          "article": "ART. 12"
+        }
+      },
+      {
+        "text": "The officials shall penalize unsporting conduct by any player, coach, substitute, team attendant or follower.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The home management or game committee is responsible for spectator behavior, insofar as it can reasonably be expected to control the spectators.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The officials may rule fouls on either team if its supporters act in such a way as to interfere with the proper conduct of the game.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "Discretion shall be used in ruling such fouls, however, lest a team be unjustly penalized.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "When team supporters become unruly or interfere with the orderly progress of the game, the officials shall stop the game until the host management resolves the situation and the game can proceed in an orderly manner.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "In the absence of a designated school representative, the home coach shall serve as the host management.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The officials shall penalize and disqualify the offender if flagrant misconduct occurs.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The officials shall remove a player from the game who commits a fifth foul (personal and technical).",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The officials shall notify the head coach and request the timer to begin the replacement interval, and then notify the player on a disqualification.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The officials shall immediately remove a player from the game who exhibits signs, symptoms or behaviors consistent with a concussion.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 8",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "When a foul occurs, an official shall signal the timer to stop the clock.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 9",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The official shall verbally inform the offender when a foul occurs.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 9",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The official shall indicate to the scorer the number of the offender and the number of free throws when a foul occurs.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 9",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "Officials may correct an error if a rule is inadvertently set aside and results in failure to award a merited free throw.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "Officials may correct an error if a rule is inadvertently set aside and results in awarding an unmerited free throw.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "Officials may correct an error if a rule is inadvertently set aside and results in permitting a wrong player to attempt a free throw.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "Officials may correct an error if a rule is inadvertently set aside and results in attempting a free throw at the wrong basket.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "Officials may correct an error if a rule is inadvertently set aside and results in erroneously counting or canceling a score.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "In order to correct any of the officials' errors listed in Article 1, such error shall be recognized by an official no later than during the first dead ball after the clock has properly started.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "If an error is made while the clock is running and the ball is dead, it shall be recognized by an official before the second live ball.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "If the error is a free throw by the wrong player or at the wrong basket, or the awarding of an unmerited free throw, the free throw and the activity during it, other than unsporting, flagrant, intentional or technical fouls, shall be canceled.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "Points scored, consumed time and additional activity, which may occur prior to the recognition of an error, shall not be nullified.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "Errors because of free-throw attempts by the wrong player or at the wrong basket shall be corrected by applying Rules 8-1 and 8-2.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "If an error is corrected, play shall be resumed from the point of interruption to rectify the error, unless it involves awarding a merited free throw(s) and there has been no change of team possession since the error was made.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 10",
+          "article": "ART. 6"
+        }
+      },
+      {
+        "text": "The scorer shall keep a record of the names and numbers of players who are to start the game and of all substitutes who enter the game.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "It is recommended the team members' numbers be entered into the scorebook in numerical order.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The scorer shall notify the nearer official when there is an infraction of the rules pertaining to submission of the roster, substitutions or numbers of players.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The scorer shall signal the officials by using the game horn or a sounding device unlike that used by the referee and umpire(s).",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The scorer may use the game horn or a sounding device immediately if, or as soon as, the ball is dead or is in control of the offending team.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The scorer shall record the field goals made, the free throws made and missed, and keep a running summary of the points scored.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The scorer shall record warnings for head coach/bench personnel misconduct as well as the personal and technical fouls reported on each player.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The scorer shall notify an official immediately when the fifth foul (personal and technical) is charged to any player.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The scorer shall notify an official immediately when the second technical foul is charged to any team member, bench personnel, or directly to the head coach.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The scorer shall notify an official immediately when the third technical foul is charged to the head coach.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The procedure if a player who has committed a fifth foul continues to play because the scorer has failed to notify the official is as follows: As soon as the scorer discovers the irregularity, the game horn should be sounded after, or as soon as, the ball is in control of the offending team or is dead.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The disqualified player shall be removed immediately if the scorer discovers the irregularity.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "Any points which may have been scored while such player was illegally in the game are counted.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "If other aspects of the error are correctable, the procedure to be followed is included among the duties of the officials.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 11",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The timer shall note when each half is to start and shall notify the referee more than three minutes before this time.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The timer shall signal the scorer three minutes before starting time.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "The timer shall be provided with a clock to be used for timing quarters, extra periods and intermissions, and a stopwatch for timing time-outs.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The clock shall be operated by the official timer.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The clock and a stopwatch shall be placed so that they may be seen by the timer.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The clock shall be started or stopped as prescribed in Rules 5-8 and 5-9.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "The timer shall sound a warning signal 15 seconds before the expiration of an intermission or a time-out.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The players shall prepare to resume play immediately after the warning signal is sounded by the timer.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The timer shall signal again at the end of the intermission or time-out.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 4"
+        }
+      },
+      {
+        "text": "The timer shall sound a warning signal to announce 15 seconds (maximum) permitted for replacing a disqualified or injured player.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "The timer shall signal again at the end of the interval for replacing a disqualified or injured player.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 12",
+          "article": "ART. 5"
+        }
+      },
+      {
+        "text": "If the red/LED light fails to illuminate and the timer's signal fails to sound, or is not recognized by the officials, the timer shall go onto the court or use other means to immediately notify the nearest official.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 13",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "If table officials agree that time expired before the ball was in flight, the goal shall not count.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 13",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "If table officials agree that the quarter or extra period ended before the foul occurred, the foul shall be disregarded, unless it was intentional or flagrant.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 13",
+          "article": "ART. 2"
+        }
+      },
+      {
+        "text": "If table officials disagree, the goal shall count and/or the foul shall be penalized, unless the referee has knowledge which alters such ruling.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 13",
+          "article": "ART. 3"
+        }
+      },
+      {
+        "text": "By state association adoption, member state associations may establish a shot clock in which the team in control shall attempt a try for field goal within 35 seconds after gaining team control.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 14",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The shot clock shall be regulated by a visible shot clock.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 14",
+          "article": "ART. 1"
+        }
+      },
+      {
+        "text": "The tap or try for field goal shall leave the shooter's hand before the expiration of time and subsequently strike the basket ring or enter the basket before or after the shot clock period has expired.",
+        "ruleReference": {
+          "rule": "Rule 2",
+          "section": "SECTION 14",
+          "article": "ART. 2"
+        }
+      }
+    ]
+  }
 ]
