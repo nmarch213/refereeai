@@ -2,15 +2,18 @@ import { relations } from "drizzle-orm";
 import {
   index,
   integer,
-  pgTable,
+  pgTableCreator,
   serial,
   text,
   timestamp,
   varchar,
+  vector,
 } from "drizzle-orm/pg-core";
 import { governingBodies, sports } from "./sports";
 
-export const rulebooks = pgTable("rulebooks", {
+const createTable = pgTableCreator((name) => `ref_${name}`);
+
+export const rulebooks = createTable("rulebooks", {
   id: varchar("id", { length: 255 })
     .notNull()
     .primaryKey()
@@ -26,7 +29,7 @@ export const rulebooks = pgTable("rulebooks", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const rules = pgTable("rules", {
+export const rules = createTable("rules", {
   id: varchar("id", { length: 255 })
     .notNull()
     .primaryKey()
@@ -37,21 +40,22 @@ export const rules = pgTable("rules", {
   ruleNumber: integer("rule_number").notNull(),
   sectionNumber: integer("section_number").notNull(),
   articleNumber: integer("article_number").notNull(),
-  text: text("text").notNull(),
 });
 
-export const rulebookSimpleSentences = pgTable(
+export const rulebookSimpleSentences = createTable(
   "rulebook_simple_sentences",
   {
     id: serial("id").primaryKey(),
-    ruleId: varchar("rule_id", { length: 255 }).references(() => rules.id),
+    ruleId: varchar("rule_id", { length: 255 })
+      .notNull()
+      .references(() => rules.id),
     text: text("text").notNull(),
-    embedding: varchar("embedding", { length: 1536 }).notNull(),
+    embeddings: vector("embeddings", { dimensions: 1536 }).notNull(),
   },
   (table) => ({
-    embeddingIdx: index("rulebook_simple_sentences_embedding_idx").using(
+    embeddingIndex: index().using(
       "hnsw",
-      table.embedding.op("vector_cosine_ops"),
+      table.embeddings.op("vector_cosine_ops"),
     ),
   }),
 );
