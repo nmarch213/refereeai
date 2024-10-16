@@ -26,7 +26,17 @@ const splitRulebook = async (): Promise<RuleChunk[]> => {
   for (const file of files) {
     if (file.endsWith(".txt")) {
       const filePath = path.join(rulesDir, file);
-      const ruleNumber = parseInt(path.parse(file).name, 10);
+      const fileName = path.parse(file).name;
+      let ruleNumber: number;
+
+      // Handle different file naming conventions
+      if (fileName.includes("-")) {
+        // For files like "10-1.txt" or "10-2.txt"
+        ruleNumber = parseInt(fileName.split("-")[0]!, 10);
+      } else {
+        // For files like "2.txt"
+        ruleNumber = parseInt(fileName, 10);
+      }
 
       if (isNaN(ruleNumber)) {
         console.warn(
@@ -39,10 +49,21 @@ const splitRulebook = async (): Promise<RuleChunk[]> => {
 
       const content = fs.readFileSync(filePath, "utf-8");
 
-      chunks.push({
-        ruleNumber,
-        content: content.trim(),
-      });
+      // Check if a chunk with this rule number already exists
+      const existingChunkIndex = chunks.findIndex(
+        (chunk) => chunk.ruleNumber === ruleNumber,
+      );
+
+      if (existingChunkIndex !== -1 && chunks[existingChunkIndex]) {
+        // If it exists, append the content
+        chunks[existingChunkIndex].content += "\n\n" + content.trim();
+      } else {
+        // If it doesn't exist, create a new chunk
+        chunks.push({
+          ruleNumber,
+          content: content.trim(),
+        });
+      }
 
       console.log(`Processed Rule ${ruleNumber}`);
     }

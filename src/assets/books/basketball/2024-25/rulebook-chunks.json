@@ -1,0 +1,1031 @@
+[
+  {
+    "ruleNumber": 10,
+    "sentences": [
+      {
+        "text": "A team shall not fail to supply the scorer with the name and number of each team member who may participate and designate the five starting players at least 10 minutes before the scheduled starting time.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 1
+        }
+      },
+      {
+        "text": "The penalty for failing to supply the scorer with the name and number of each team member and designating the five starting players is one foul for both requirements.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 1
+        }
+      },
+      {
+        "text": "The penalty is enforced when the failure occurs.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not change a designated starter after the 10-minute time limit specified in Article 1 unless necessitated as in Rule 3-2-2a.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "A team shall not add a name to the team member list after the 10-minute time limit specified in Article 1.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "A team shall not require the scorer to change a team member's or player's number in the scorebook after the 10-minute time limit specified in Article 1.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "A team shall not require a player to change to the number in the scorebook after the 10-minute time limit specified in Article 1.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "A team shall not have identical numbers on team members and/or players.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "The penalty for Article 2 is one foul only per team regardless of the number of infractions.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "The penalty for changing a designated starter is penalized if discovered before the ball becomes live to start the game.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "The penalties for adding a name to the team member list, requiring the scorer to change a team member's or player's number, and requiring a player to change to the number in the scorebook are penalized when they occur.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "The penalty for having identical numbers on team members and/or players is penalized when discovered.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 2
+        }
+      },
+      {
+        "text": "A team shall not use a megaphone or any electronic communication device, or electronic equipment for voice communication with players on the court, or use electronic audio and/or video devices to request a review of a decision of the contest officials.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 3
+        }
+      },
+      {
+        "text": "A team shall not fail to occupy the team members' bench to which it is assigned.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 4
+        }
+      },
+      {
+        "text": "The penalty for failing to occupy the assigned team members' bench is two free throws plus the ball for a division-line throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 4
+        }
+      },
+      {
+        "text": "The penalty for failing to occupy the assigned team members' bench is penalized when it occurs.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 1,
+          "article": 4
+        }
+      },
+      {
+        "text": "A team shall not allow the game to develop into an actionless contest, which includes several acts.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not consume a full minute through not being ready when it is time to start either half when the clock is not running.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not delay the game by preventing the ball from being made promptly live or from being put in play.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not commit a violation of the throw-in boundary-line plane after any team warning for delay.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not contact the free thrower or a huddle of two or more players in the lane prior to a free throw following any team warning for delay.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not interfere with the ball following a goal after any team warning for delay.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not fail to have the court ready for play following any time-out after any team warning for delay.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 1
+        }
+      },
+      {
+        "text": "A team shall not have more than five team players participating simultaneously.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 2
+        }
+      },
+      {
+        "text": "A team shall not request an excess time-out.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 3
+        }
+      },
+      {
+        "text": "A team shall not commit an unsporting foul.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 4
+        }
+      },
+      {
+        "text": "A team shall not fail to have all players return to the court at approximately the same time following a time-out or intermission.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 5
+        }
+      },
+      {
+        "text": "A team shall not allow players to lock arms or grasp a teammate(s) in an effort to restrict the movement of an opponent.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 6
+        }
+      },
+      {
+        "text": "The penalty for Article 1, 4, 5, and 6 is two free throws plus the ball for a division-line throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 6
+        }
+      },
+      {
+        "text": "The penalty for Article 2 is penalized if discovered while being violated.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 6
+        }
+      },
+      {
+        "text": "The penalty for Article 3 is penalized when discovered.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 2,
+          "article": 6
+        }
+      },
+      {
+        "text": "A substitute shall not enter the court without reporting to the scorer.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 3,
+          "article": 1
+        }
+      },
+      {
+        "text": "A substitute shall not enter the court without being beckoned by an official, except between quarters and during time-outs.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 3,
+          "article": 2
+        }
+      },
+      {
+        "text": "The penalty for Section 3 is two free throws plus the ball for a division-line throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 3,
+          "article": 1
+        }
+      },
+      {
+        "text": "The penalty for either or both requirements in Section 3 is one foul.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 3,
+          "article": 1
+        }
+      },
+      {
+        "text": "The penalty for Section 3 is penalized if discovered before the ball becomes live.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 3,
+          "article": 1
+        }
+      },
+      {
+        "text": "A player shall not participate after changing the player's number without reporting it to the scorer and an official.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 1
+        }
+      },
+      {
+        "text": "The penalty for Article 1 is a flagrant foul.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 1
+        }
+      },
+      {
+        "text": "The penalty for Article 1 is penalized if discovered while being violated.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 1
+        }
+      },
+      {
+        "text": "A player shall not purposely and/or deceitfully delay returning after legally being out of bounds.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 2
+        }
+      },
+      {
+        "text": "A player shall not grasp either basket at any time during the game except to prevent injury; dunk or stuff, or attempt to dunk or stuff a dead ball.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 3
+        }
+      },
+      {
+        "text": "A player shall not illegally contact the backboard/ring by placing a hand on the backboard or ring to gain an advantage.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 4
+        }
+      },
+      {
+        "text": "A player shall not illegally contact the backboard/ring by intentionally slapping or striking the backboard or causing the ring to vibrate while a try or tap for field goal is in flight or is touching the backboard or is in the basket or in the cylinder above the basket.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 4
+        }
+      },
+      {
+        "text": "A player shall not delay the game by acts such as preventing the ball from being made live promptly or from being put in play.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 5
+        }
+      },
+      {
+        "text": "A player shall not delay the game by failing, when in possession, to immediately pass the ball to the nearer official when a whistle sounds.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 5
+        }
+      },
+      {
+        "text": "A player shall not delay the game by failing to be in the free-throw semicircle when the official is ready to administer the free throw unless the resumption-of-play procedure is in effect following a time-out or intermission.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 5
+        }
+      },
+      {
+        "text": "A player shall not delay the game by committing repeated violations of the throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 5
+        }
+      },
+      {
+        "text": "A player shall not commit an unsporting foul, which includes several acts or conduct.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not disrespectfully address or contact an official or gesture in such a manner as to indicate resentment.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not use profane or inappropriate language or obscene gestures.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not bait or taunt an opponent.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not purposely obstruct an opponent's vision by waving or placing hand(s) near an opponent's eyes.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not climb on or lift a teammate to secure greater height.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not fake being fouled, knowingly attempt a free throw or accept a foul to which the player was not entitled.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not use alcohol, or any form of tobacco product beginning with arrival at the competition site until departure following the completion of the contest.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not remove the jersey and/or pants/skirt within the visual confines of the playing area.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not leave the playing court for an unauthorized reason to demonstrate resentment, disgust or intimidation.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 6
+        }
+      },
+      {
+        "text": "A player shall not intentionally or flagrantly contact an opponent when the ball is dead and such contact is not a personal foul.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 7
+        }
+      },
+      {
+        "text": "A player shall not be charged with fighting.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 8
+        }
+      },
+      {
+        "text": "The penalty for Article 8 is a flagrant foul.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 8
+        }
+      },
+      {
+        "text": "A player shall not commit goaltending during a free throw.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 9
+        }
+      },
+      {
+        "text": "A player shall not reach through the throw-in boundary-line plane and touch or dislodge the ball as in Rule 9-2.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 10
+        }
+      },
+      {
+        "text": "The penalty for Section 4 is two free throws plus the ball for a division-line throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 10
+        }
+      },
+      {
+        "text": "A single flagrant technical foul or the second technical foul charged to a player results in disqualification of the offender to the team bench.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 4,
+          "article": 10
+        }
+      },
+      {
+        "text": "The head coach is responsible for personal conduct and behavior, as well as substitutes, disqualified team members and all other bench personnel.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel, including the head coach, shall not commit an unsporting foul, which includes several acts or conduct.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not disrespectfully address an official.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not attempt to influence an official's decision.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not use profane or inappropriate language or obscene gestures.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not disrespectfully address, bait or taunt an opponent.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not object to an official's decision by rising from the bench or using gestures.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not incite undesirable crowd reactions.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not be charged with fighting.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not remove the jersey and/or pants/skirt within the visual confines of the playing area.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not grasp either basket except to prevent injury; dunking or attempting to dunk or stuff a dead ball.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 1
+        }
+      },
+      {
+        "text": "Bench personnel shall not enter the court unless by permission of an official to attend an injured player.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 2
+        }
+      },
+      {
+        "text": "Bench personnel shall not use alcohol, or any form of tobacco product beginning with arrival at the competition site until departure following the completion of the contest.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 3
+        }
+      },
+      {
+        "text": "Bench personnel shall not stand at the team bench while the clock is running or is stopped, and shall remain seated, except in certain situations.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The head coach may stand within the designated coaching box to request a time-out or signal players to request a time-out.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The head coach may stand and/or leave the coaching box to confer with personnel at the scorer's table to request a time-out.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The head coach may stand within the coaching box to replace or remove a disqualified/injured player or player directed to leave the game.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The head coach may stand to spontaneously react to an outstanding play by a team member or to acknowledge a replaced player(s), but shall immediately return to their seats.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The officials may warn the head coach unless the offense is judged to be major, in which case a technical foul shall be ruled.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The penalty for Articles 1a, 1b, 1d, 1e, 1f, 2, and 4 is two free throws plus the ball for a division-line throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "If the head coach is the offender, the foul is charged directly to the head coach.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The foul is charged to the offender if not the head coach and also charged indirectly to the head coach.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "The penalty for Article 1g is a flagrant foul, and the offender is disqualified.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "If the offender is bench personnel, each foul is also charged indirectly to the head coach.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 4
+        }
+      },
+      {
+        "text": "A bench personnel shall not leave the confines of the bench during a fight or when a fight may occur, except for the head coach and any number of assistant coaches to prevent the situation from escalating.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 5
+        }
+      },
+      {
+        "text": "The penalty for Article 5 is a flagrant foul, disqualification of individual offender, but only one technical foul penalty is administered regardless of the number of offenders.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 5
+        }
+      },
+      {
+        "text": "The one foul is also charged indirectly to the head coach.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 5
+        }
+      },
+      {
+        "text": "If the head coach is an offender, an additional flagrant technical foul is charged directly to the head coach and penalized.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 5
+        }
+      },
+      {
+        "text": "When a simultaneous technical foul(s) by opponents occurs, the free throws are not awarded when the penalties offset.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 5,
+          "article": 5
+        }
+      },
+      {
+        "text": "The head coach shall remain seated on the team bench, except in certain situations.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 1
+        }
+      },
+      {
+        "text": "By state association adoption, the head coach may stand within the designated coaching box.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 1
+        }
+      },
+      {
+        "text": "The first technical foul charged directly or indirectly to the head coach results in loss of coaching-box privileges and the head coach shall remain seated for the remainder of the game, except as stated in Rule 10-6-1b, c, d, and e.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 1
+        }
+      },
+      {
+        "text": "The head coach shall replace or remove a disqualified/injured player, or player directed to leave the game, within 15 seconds when a substitute is available.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 2
+        }
+      },
+      {
+        "text": "The head coach shall not permit a team member to participate after being removed from the game for disqualification.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 3
+        }
+      },
+      {
+        "text": "The head coach shall not permit a team member to participate while wearing an illegal uniform.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 4
+        }
+      },
+      {
+        "text": "The head coach shall not permit team members to leave the bench area and/or playing court for an unauthorized reason.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "The penalty for Article 1 is that the official may warn the head coach unless the offense is judged to be major, in which case a technical foul shall be ruled.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "The penalty for Section 6 is two free throws plus the ball for a division-line throw-in.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "The foul is charged directly to the head coach.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "The penalties for Articles 3 and 5 are penalized if discovered while being violated.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "The penalty for Article 4 is penalized when discovered.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "Only one technical foul is charged regardless of the number of offenders for Articles 4 and 5.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "A single flagrant foul, the second direct technical foul or the third technical charged to the head coach results in disqualification and ejection.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "Ejected adult bench personnel shall leave the vicinity (out of sight and sound) of the playing area immediately and are prohibited from any further contact (direct or indirect) with the team during the remainder of the game.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "Failure to comply with the rules of ejection may result in the game being forfeited.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 6,
+          "article": 5
+        }
+      },
+      {
+        "text": "A player shall not hold, push, charge, trip or impede the progress of an opponent by extending arm(s), shoulder(s), hip(s) or knee(s), or by bending the body into other than a normal position; nor use any rough tactics.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 1
+        }
+      },
+      {
+        "text": "A player shall not contact an opponent with the hand unless such contact is only with the opponent's hand while it is on the ball and is incidental to an attempt to play the ball.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 2
+        }
+      },
+      {
+        "text": "A player shall not use the hands on an opponent in any way that inhibits the freedom of movement of the opponent or acts as an aid to a player in starting or stopping.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 3
+        }
+      },
+      {
+        "text": "A player shall not extend the arm(s) fully or partially other than vertically so that freedom of movement of an opponent is hindered when contact with the arms occurs.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 4
+        }
+      },
+      {
+        "text": "A player may hold the hand(s) and arm(s) in front of the player's own face or body for protection and to absorb force from an imminent charge by an opponent.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 4
+        }
+      },
+      {
+        "text": "A player shall not use the forearm and/or hand to prevent an opponent from attacking the ball during a dribble or when throwing for goal.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 5
+        }
+      },
+      {
+        "text": "Contact caused by a defensive player who approaches from behind is pushing; contact caused by the momentum of a player who has thrown for a goal is charging.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 6
+        }
+      },
+      {
+        "text": "A dribbler shall neither charge into nor contact an opponent in the dribbler's path nor attempt to dribble between two opponents or between an opponent and a boundary, unless the space is such as to provide a reasonable chance for the dribbler to go through without contact.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 7
+        }
+      },
+      {
+        "text": "When a dribbler, without contact, sufficiently passes an opponent to have head and shoulders in advance of that opponent, the greater responsibility for subsequent contact is on the opponent.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 8
+        }
+      },
+      {
+        "text": "When a dribbler is moving in a straight-line path, the dribbler may not be crowded out of that path, but if an opponent is able to legally obtain a defensive position in that path, the dribbler shall avoid contact by changing direction or ending the dribble.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 9
+        }
+      },
+      {
+        "text": "The dribbler is not permitted additional rights in executing a jump try for field goal, pivoting, feinting or in beginning a dribble.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 10
+        }
+      },
+      {
+        "text": "A player shall adhere to the rules pertaining to illegal contact, including but not limited to, guarding as in Rule 4-23, rebounding as in Rule 4-37, screening as in Rule 4-40, and verticality as in Rule 4-45.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 11
+        }
+      },
+      {
+        "text": "The following acts constitute a foul when committed against a ball handler dribbler.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      },
+      {
+        "text": "A player becomes a ball handler when that player receives the ball, which would include a player in a post position.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      },
+      {
+        "text": "A player shall not place two hands on the player who is a ball handler.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      },
+      {
+        "text": "A player shall not place an extended arm bar on the player who is a ball handler.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      },
+      {
+        "text": "A player shall not place and keep a hand on the player who is a ball handler.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      },
+      {
+        "text": "A player shall not contact the player who is a ball handler more than once with the same hand or alternating hands.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      },
+      {
+        "text": "The penalty for Section 7 is that the offender is charged with one foul, and if it is the player's fifth foul (personal and technical) or if it is flagrant, the player is disqualified.",
+        "ruleReference": {
+          "rule": 10,
+          "section": 7,
+          "article": 12
+        }
+      }
+    ]
+  }
+]

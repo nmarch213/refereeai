@@ -7,6 +7,7 @@ context.
 4. Anytime you see A(NUMBER) or B(NUMBER), A will always refer to an Offensive Player and B will always refer to a Defensive Player.
 5. There may be multiple A(NUMBER) or B(NUMBER) in a single proposition, but they will always refer to distinct players. (e.g. "A1 passes to A2, during the pass B2 fouls A1")
 6. You must always keep track of the Rule, Section, and Article that each proposition is referencing.
+7. Make sure all content follows JSON syntax. Alter the content to make it valid JSON.
 
 <Example>
 
