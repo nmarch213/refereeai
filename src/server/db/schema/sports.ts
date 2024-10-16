@@ -46,21 +46,7 @@ export const sports = createTable("sport", {
   ),
 });
 
-export const sportsRelations = relations(sports, ({ one, many }) => ({
-  governingBody: one(governingBodies, {
-    fields: [sports.governingBodyId],
-    references: [governingBodies.id],
-  }),
-  rulebooks: many(rulebooks),
-}));
-
-export const rulebooksRelations = relations(rulebooks, ({ one }) => ({
-  sport: one(sports, {
-    fields: [rulebooks.sportId],
-    references: [sports.id],
-  }),
-}));
-
+// Add relations
 export const governingBodiesRelations = relations(
   governingBodies,
   ({ many }) => ({
@@ -68,5 +54,10 @@ export const governingBodiesRelations = relations(
   }),
 );
 
-// Export the enum values for use in other files
-export const RULEBOOK_TYPES = rulebookTypeEnum.enumValues;
+export const sportsRelations = relations(sports, ({ one, many }) => ({
+  governingBody: one(governingBodies, {
+    fields: [sports.governingBodyId],
+    references: [governingBodies.id],
+  }),
+  rulebooks: many(rulebooks),
+}));

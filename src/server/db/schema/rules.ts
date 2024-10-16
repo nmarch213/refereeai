@@ -1,13 +1,13 @@
+import { relations } from "drizzle-orm";
 import {
+  index,
+  integer,
   pgTable,
   serial,
   text,
-  integer,
   timestamp,
   varchar,
-  index,
 } from "drizzle-orm/pg-core";
-import { relations } from "drizzle-orm";
 import { governingBodies, sports } from "./sports";
 
 export const rulebooks = pgTable("rulebooks", {
@@ -49,14 +49,23 @@ export const rulebookSimpleSentences = pgTable(
     embedding: varchar("embedding", { length: 1536 }).notNull(),
   },
   (table) => ({
-    embeddingIdx: index().using(
+    embeddingIdx: index("rulebook_simple_sentences_embedding_idx").using(
       "hnsw",
       table.embedding.op("vector_cosine_ops"),
     ),
   }),
 );
 
-export const rulebooksRelations = relations(rulebooks, ({ many }) => ({
+// Add relations
+export const rulebooksRelations = relations(rulebooks, ({ one, many }) => ({
+  sport: one(sports, {
+    fields: [rulebooks.sportId],
+    references: [sports.id],
+  }),
+  governingBody: one(governingBodies, {
+    fields: [rulebooks.governingBodyId],
+    references: [governingBodies.id],
+  }),
   rules: many(rules),
 }));
 
@@ -65,5 +74,15 @@ export const rulesRelations = relations(rules, ({ one, many }) => ({
     fields: [rules.rulebookId],
     references: [rulebooks.id],
   }),
-  sentences: many(rulebookSimpleSentences),
+  simpleSentences: many(rulebookSimpleSentences),
 }));
+
+export const rulebookSimpleSentencesRelations = relations(
+  rulebookSimpleSentences,
+  ({ one }) => ({
+    rule: one(rules, {
+      fields: [rulebookSimpleSentences.ruleId],
+      references: [rules.id],
+    }),
+  }),
+);

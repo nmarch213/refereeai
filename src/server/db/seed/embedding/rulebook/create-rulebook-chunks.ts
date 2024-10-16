@@ -61,7 +61,7 @@ async function createRulebookChunks(sport: string, year: string) {
   const results = [];
   const outputPath = `src/assets/books/${sport}/${year}/rulebook-chunks.json`;
 
-  for (let i = 0; i < chunks.length; i++) {
+  for (let i = 9; i < chunks.length; i++) {
     const chunk = chunks[i];
     if (!chunk) {
       console.warn(`Skipping undefined chunk at index ${i}`);
