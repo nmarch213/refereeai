@@ -14,18 +14,18 @@ import {
 } from "~/components/ui/card";
 import { Send } from "lucide-react";
 
-export default function ChatInterface({ sport }: { sport: string }) {
+export default function ChatInterface({ rulebookId }: { rulebookId: string }) {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     api: "/api/chat",
     body: {
-      sport,
+      rulebookId,
     },
   });
 
   return (
     <Card className="flex h-[600px] flex-col">
       <CardHeader>
-        <CardTitle>{sport} Rulebook Chat</CardTitle>
+        <CardTitle>Rulebook Chat</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow overflow-hidden">
         <ScrollArea className="h-full pr-4">

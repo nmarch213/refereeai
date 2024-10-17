@@ -14,6 +14,7 @@ type Sports = {
   year: BookYear;
   name: string;
   description: string;
+  rulebookId: string;
 }[];
 
 const sports: Sports = [
@@ -22,12 +23,14 @@ const sports: Sports = [
     year: "2024-25",
     name: "Basketball",
     description: "A fast-paced game played on a court with two teams.",
+    rulebookId: "358e37f0-9939-45f3-b2d6-23a4be99201f",
   },
   {
     id: "volleyball",
     year: "2024-25",
     name: "Volleyball",
     description: "A team sport played on a court with two teams.",
+    rulebookId: "358e37f0-9939-45f3-b2d6-23a4be99201f",
   },
 ];
 
@@ -47,7 +50,7 @@ export default function SportRulebookChat({
       <main className="flex-grow">
         <div className="h-full w-full p-4">
           {/* <MDXBookPage sport={sport.id} year={sport.year} /> */}
-          <ChatInterface sport={sport.id} />
+          <ChatInterface rulebookId={sport.rulebookId} />
         </div>
       </main>
     </div>
