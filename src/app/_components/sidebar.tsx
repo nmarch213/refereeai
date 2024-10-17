@@ -27,7 +27,7 @@ export const subMenuItems = [
 ];
 
 export function Sidebar() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [expandedSport, setExpandedSport] = useState<string | null>(null);
   const pathname = usePathname();
 

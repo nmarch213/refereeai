@@ -1,8 +1,9 @@
-import { desc, eq } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { db } from "~/server/db";
-import { governingBodies, rulebooks, sports } from "~/server/db/schema/sports";
+import { rulebooks } from "~/server/db/schema/rules";
+import { governingBodies, sports } from "~/server/db/schema/sports";
 
 export const sportsRouter = createTRPCRouter({
   // Governing Bodies
@@ -107,57 +108,5 @@ export const sportsRouter = createTRPCRouter({
         .from(rulebooks)
         .where(eq(rulebooks.id, input.id))
         .limit(1);
-    }),
-
-  createRulebook: publicProcedure
-    .input(
-      z.object({
-        sportId: z.string(),
-        year: z.number(),
-        type: z.string(),
-        content: z.string(),
-        embedding: z.array(z.number()),
-      }),
-    )
-    .mutation(async ({ input }) => {
-      return db.insert(rulebooks).values(input).returning();
-    }),
-
-  updateRulebook: publicProcedure
-    .input(
-      z.object({
-        id: z.string(),
-        year: z.number().optional(),
-        type: z.string().optional(),
-        content: z.string().optional(),
-        embedding: z.array(z.number()).optional(),
-      }),
-    )
-    .mutation(async ({ input }) => {
-      const { id, ...updateData } = input;
-      return db
-        .update(rulebooks)
-        .set(updateData)
-        .where(eq(rulebooks.id, id))
-        .returning();
-    }),
-
-  // Advanced queries
-  getSportWithRulebooks: publicProcedure
-    .input(z.object({ sportId: z.string() }))
-    .query(async ({ input }) => {
-      const sport = await db
-        .select()
-        .from(sports)
-        .where(eq(sports.id, input.sportId))
-        .limit(1);
-
-      const rbs = await db
-        .select()
-        .from(rulebooks)
-        .where(eq(rulebooks.sportId, input.sportId))
-        .orderBy(desc(rulebooks.year), rulebooks.type);
-
-      return { ...sport[0], rulebooks: rbs };
     }),
 });
