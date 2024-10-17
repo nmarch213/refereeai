@@ -2,7 +2,11 @@ import { openai } from "@ai-sdk/openai";
 import { convertToCoreMessages, embed, streamText } from "ai";
 import { sql, desc, cosineDistance, gt, eq } from "drizzle-orm";
 import { db } from "~/server/db";
-import { rulebooks, rulebookSimpleSentences } from "~/server/db/schema/rules";
+import {
+  rulebooks,
+  rulebookSimpleSentences,
+  rules,
+} from "~/server/db/schema/rules";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -31,17 +35,24 @@ export async function POST(req: Request) {
   const results = await db
     .select({
       id: rulebookSimpleSentences.id,
-      page: rulebookSimpleSentences.ruleId,
-      content: rulebookSimpleSentences.text,
+      ruleId: rules.id,
+      ruleNumber: rules.ruleNumber,
+      sectionNumber: rules.sectionNumber,
+      articleNumber: rules.articleNumber,
+      simpleSentence: rulebookSimpleSentences.text,
       similarity,
     })
     .from(rulebookSimpleSentences)
+    .innerJoin(rules, eq(rulebookSimpleSentences.ruleId, rules.id))
     .where(gt(similarity, 0.5))
     .orderBy((t) => desc(t.similarity))
-    .limit(20);
+    .limit(5);
 
   const context = results
-    .map((doc) => `Page ${doc.page}: ${doc.content}`)
+    .map(
+      (doc) =>
+        `Rule ${doc.ruleNumber}.${doc.sectionNumber}.${doc.articleNumber}: ${doc.simpleSentence}`,
+    )
     .join("\n\n");
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
