@@ -100,7 +100,7 @@ async function createRulebookChunks(sport: string, year: string) {
     const response = await generateObject({
       model: openai.chat("gpt-4o-mini"),
       temperature: 0,
-      schema: RulebookProposition,
+      schema: RulebookPropositionSchema,
       system: propositionSystemPrompt(sport),
       prompt: `Decompose the following Rulebook Content for Rule ${ruleNumber}: 
 			<Content>
@@ -130,7 +130,7 @@ async function createRulebookChunks(sport: string, year: string) {
 }
 
 // Update the RulebookProposition schema to include the ruleNumber
-const RulebookProposition = z.object({
+export const RulebookPropositionSchema = z.object({
   ruleNumber: z.number().describe("The rule number"),
   sentences: z.array(
     z.object({
